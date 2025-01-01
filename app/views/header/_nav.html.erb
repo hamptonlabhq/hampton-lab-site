@@ -1,30 +1,31 @@
 <nav class="nav">
   <div class="nav__container">
     <div class="nav__logo">
-      <a href="/" class="icon icon--basecamp" aria-label="Basecamp">
-        <svg height="37" viewBox="0 0 43 37" width="43" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m9.11245 4.96735c3.71755-3.30318 8.12595-4.96735 13.18775-4.96735 6.653 0 11.4993 4.25486 14.756 9.78279 3.2565 5.52761 4.9536 12.37121 5.305 17.66761.0325.4457-.0654.8911-.2823 1.2816l-.0011.0024-.0013.0021c-3.1106 5.3439-10.1714 8.2612-19.7748 8.2614-6.8962.0906-13.49199-2.8171-18.07711-7.969-.54569-.6067-.70947-1.4659-.4251-2.2307.61494-1.6552 1.76704-4.4162 3.2968-6.7708.76476-1.177 1.63046-2.2629 2.57901-3.0583.9482-.7951 1.9972-1.3145 3.1223-1.3207h.0014c1.1335 0 2.1132.4518 2.9626 1.0623.8305.5969 1.5529 1.3581 2.1824 2.0213l.0382.0405.0021.0021c.3606.3999.7431.7793 1.1457 1.1368 1.7152-2.2044 3.1506-4.6135 4.2725-7.172l.0034-.008.0043-.0078c.5441-1.0339 1.8035-1.4594 2.8632-.9673 1.0598.492 1.5472 1.7286 1.1087 2.8114l-.0023.006-.0027.0057c-2.2942 4.9152-4.0667 7.4003-5.3849 8.6581-.6612.631-1.2134.9586-1.6652 1.1257-.4553.1686-.7936.1686-1.0031.1686-.961 0-1.7805-.3707-2.5096-.8979-.7148-.5169-1.3582-1.1958-1.9708-1.8422l-.0259-.0273c-.2813-.2984-.7075-.7499-1.1178-1.1264-.2055-.1888-.4013-.3532-.5688-.469-.0837-.0579-.1554-.1003-.2138-.1271-.0289-.0135-.0518-.0217-.0693-.0267-.0041-.0011-.0078-.0019-.011-.0026-.0688.0182-.1661.0656-.2926.1599-.1406.1048-.3011.255-.4784.4499-.3543.3895-.7583.9382-1.1842 1.6052-.828 1.2962-1.72463 3.0171-2.48507 4.8278 3.69297 3.6451 8.70587 5.6433 13.89847 5.535h.0051c7.6057 0 13.2067-2.063 15.6357-5.5441-.4322-4.7999-1.9775-10.4676-4.5985-14.9376-2.6397-4.50233-6.3344-7.73542-11.0372-7.73542-8.0326 0-14.12677 5.60339-18.08345 16.77792l-.00246.0069-.00291.0068c-.45185 1.0672-1.65612 1.5984-2.7488 1.2126-1.092715-.3861-1.696399-1.5557-1.3779807-2.6697l.0020652-.0074.0025157-.0072c2.2981498-6.5037 5.3105498-11.42696 9.0232698-14.72585z" fill="currentColor" fill-rule="evenodd"></path></svg>
-        <strong>Basecamp</strong>
-      </a>
-      <div class="nav__phrase">is the <span class="highlight">refreshingly simple</span> <strong>project management system</strong> by</div>
-      <b class="icon icon--37signals">
-        <svg height="37" viewBox="0 0 37 37" width="37" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="m35.4812 22.164c2.0248-2.0239 2.0248-5.3007-.0003-7.3248-2.0198-2.0258-5.301-2.0258-7.319.0007-2.0281 2.0232-2.0292 5.3012 0 7.3241 2.017 2.0215 5.2989 2.0221 7.3193 0z"></path><path d="m22.1611 8.84334c2.0249-2.02387 2.0249-5.30008-.0002-7.32415-2.0198-2.02571-5.301-2.025711-7.319.00075-2.0281 2.02309-2.0292 5.30112 0 7.32404 2.017 2.02152 5.2989 2.02152 7.3192-.00064z"></path><path d="m14.8417 35.4878c-2.0004-1.9957-1.9608-5.2847 0-7.3054 1.6632-1.6643 1.6633-4.3568 0-6.0182-1.6514-1.6494-4.3462-1.6166-6.01902 0-2.01326 2.0137-5.29117 2.0138-7.30726 0-2.000628-1.9982-1.960613-5.3031.00011-7.3247 1.64664-1.6469 1.614-4.3531 0-6.02035-2.020627-2.01857-2.020787-5.2857 0-7.30443 2.01572-2.019741 5.29428-2.019741 7.30798.00069 2.00119 1.99779 1.96109 5.28187-.0009 7.30374-1.6608 1.66305-1.6608 4.35645.00061 6.02035 1.65198 1.6478 4.34698 1.6154 6.01848 0 2.0158-2.0162 5.3064-2.0167 7.3201 0 2.004 1.9963 1.9646 5.3019 0 7.3247-1.6606 1.661-1.6615 4.354 0 6.0188 2.0241 2.0154 2.0252 5.2892 0 7.3055-2.0128 2.0155-5.3039 2.0155-7.3201-.0007z"></path></g></svg>
-        <strong>37signals</strong>
-      </b>
+      <%= link_to root_path do %>
+        <%= image_tag "logo_full_black.svg", {class: "nav__logo--icon"} %>
+      <% end %>
     </div>
     <div class="nav__links">
-      <a href="/customers" aria-label="Real world results">Real world results</a>
-      <a href="/#features" aria-label="Features">Features</a>
-      <a href="/pricing" aria-label="Pricing">Pricing</a>
+      <%= link_to root_path do %>
+        Founder letter.
+      <% end %>
+
+      <%= link_to root_path do %>
+        Company.
+      <% end %>
+
+      <!-- <a href="/customers" aria-label="Real world results">Real world results</a> -->
+      <!-- <a href="/#features" aria-label="Features">Features</a> -->
+      <!-- <a href="/pricing" aria-label="Pricing">Pricing</a> -->
     </div>
     <div class="nav__buttons">
-      <a class="nav__button nav__button--launchpad" href="https://launchpad.37signals.com/signin" target="_blank" data-controller="signup" data-action="signup#trackLogin" aria-label="Sign in">Sign in</a>
-      <a class="nav__button nav__button--signup" href="/pricing" aria-label="Sign up free">Sign up free</a>
+      <%= mail_to "waseem.mehany@hamptonlab.com", image_tag("mail-icon.svg", class: "nav__logo--icon") %>
     </div>
-    <label class="nav__toggle" for="nav-active" aria-label="Nav Toggle" tabindex="0"></label>
+    <!-- <label class="nav__toggle" for="nav-active" aria-label="Nav Toggle" tabindex="0"></label> -->
   </div>
-  <div class="nav__mobile">
+  <!-- <div class="nav__mobile">
     <a href="/customers" aria-label="Real world results">Real world results</a>
     <a href="/#features" aria-label="Features">Features</a>
     <a href="/pricing" aria-label="Pricing">Pricing</a>
-  </div>
+  </div> -->
 </nav>
