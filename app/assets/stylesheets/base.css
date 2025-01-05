@@ -4,12 +4,15 @@ body {
   flex-direction: column;
   min-height: 100vh;
   max-width: 80rem;
+  margin: 0px auto;
 }
 
 main {
   display: flex;
   flex-direction: column;
   overflow-x: clip;
-  padding-top: var(--space-xxx-large);
+  overflow-y: hidden;
+  padding: var(--space-xx-large) 0px;
   position: relative;
+  margin: 1rem 0rem;
 }

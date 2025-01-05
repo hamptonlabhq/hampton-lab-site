@@ -11,6 +11,9 @@
   --color-gray-100: #f5f5f5;
   --color-gray-200: #ebebeb;
 
+  /* Colors: rgb */
+  --color-rgb-black-100: 29, 29, 31;
+
   /* Font colors */
   --color-text: var(--color-black-200);
   --color-link: var(--color-blue-200);
@@ -19,16 +22,28 @@
   --font-h1: 3.75rem;
   --font-h2: 3.125rem;
   --font-h3: 2.5rem;
-  --font-text: 1.125rem;
+  --font-text: 1.5rem;
+  /* --font-text: 1.125rem; */
 
   /* Spaces: for padding, margins, and gaps */
   --space-small: 0.75rem;
-  --space-xxx-large: 5rem;
+  --space-normal: 1.5rem;
+  --space-medium: 2.5rem;
+  --space-large: 3rem;
+  --space-x-large: 4rem;
+  --space-xx-large: 5rem;
+
+  /* Strokes */
+  --border-color: var(--color-gray-200);
+  --border-width: 1px;
 
   /* Transitions */
   --transition-scale-up: 1.05;
   --transition-speed: 150ms;
   --transition-curve: ease-in-out;
+
+  /* Breakpoint */
+  --media-breakpoint: 768px;
 }
 
 /* Fonts */
@@ -74,31 +89,31 @@
 }
 
 :is(h1) {
-  font-size: var(--font-xx-large);
-  font-weight: 500;
   font-size: var(--font-h1);
   color: var(--color-text);
+  font-weight: 500;
 }
 
 :is(h2) {
-  font-size: var(--font-x-large);
-  font-weight: 500;
   font-size: var(--font-h2);
   color: var(--color-text);
+  font-weight: 500;
 }
 
 :is(h3) {
-  font-size: var(--font-large);
-  font-weight: 300;
   font-size: var(--font-h3);
   color: var(--color-text);
+  font-weight: 500;
+  margin-block: 0.25rem;
+  line-height: 1;
 }
 
 :is(p) {
-  font-size: var(--font-medium);
-  font-weight: 300;
   font-size: var(--font-text);
   color: var(--color-text);
+  font-weight: 300;
+  margin-block: 0.25rem;
+  line-height: normal;
 }
 
 :is(a) {

@@ -67,9 +67,8 @@
   transition: transform var(--transition-speed) var(--transition-curve);
 }
 
-@media (min-width: 64em) {
-  .nav__toggle,
-  .nav__mobile {
+@media (max-width: 48rem) {
+  .nav__links {
     display: none;
   }
 }
