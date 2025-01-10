@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4.1" # Adjust this to match your Ruby version
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          bundle install
+
+      - name: Setup database
+        run: |
+          bundle exec rails db:create
+          bundle exec rails db:migrate
+
+      - name: Start Rails server in background
+        run: |
+          bundle exec rails server -d
+          sleep 5 # Give the server some time to start
+
+      - name: Generate static files
+        run: |
+          wget --convert-links --mirror --adjust-extension --no-parent --wait=2 http://127.0.0.1:3000/
+          mv 127.0.0.1:3000 _site
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site # The folder containing your static files
+          branch: gh-pages # The branch to deploy to
+          clean: true # Automatically remove deleted files from the deployment branch

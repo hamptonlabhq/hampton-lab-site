@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Hamptonlab.com
+## Running the site
+`bin/rails s`
+
+## Deploying a static version of the site (on Github Pages)
+1. Make sure the site is running
+2. Run `wget --convert-links --mirror --adjust-extension http://127.0.0.1:3000/` in the directory you want it to copy in.
+3. Upload static files to your GitHub branch for production.
