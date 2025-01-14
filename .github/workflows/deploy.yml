@@ -37,6 +37,12 @@ jobs:
           wget --convert-links --mirror --adjust-extension --no-parent --wait=2 http://127.0.0.1:3000/
           mv 127.0.0.1:3000 _site
 
+      - name: Copy font files
+        run: |
+          mkdir -p _site/assets/fonts
+          cp -r public/assets/fonts/* _site/assets/fonts/ || true
+          cp -r public/assets/*.{woff,woff2,ttf,eot,svg} _site/assets/ || true
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
