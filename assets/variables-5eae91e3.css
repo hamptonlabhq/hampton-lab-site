@@ -49,28 +49,28 @@
 /* Fonts */
 @font-face {
   font-family: "Neue Plak";
-  src: url(asset-path("Neue Plak Ultra Light.ttf")) format("truetype");
+  src: font-url("neue-plak-ultra-light.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Neue Plak";
-  src: url(asset-path("Neue Plak Light.ttf")) format("truetype");
+  src: font-url("/assets/neue-plak-light-b730be11.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Neue Plak";
-  src: url(asset-path("Neue Plak Regular.ttf")) format("truetype");
+  src: font-url("/assets/neue-plak-regular-926cb9fc.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Neue Plak";
-  src: url(asset-path("Neue Plak SemiBold.ttf")) format("truetype");
+  src: font-url("/assets/neue-plak-semi-bold-dafd004d.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
