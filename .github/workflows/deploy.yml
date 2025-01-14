@@ -34,14 +34,17 @@ jobs:
 
       - name: Generate static files
         run: |
-          wget --convert-links --mirror --adjust-extension --no-parent --wait=2 http://127.0.0.1:3000/
-          mv 127.0.0.1:3000 _site
+          mkdir -p _site
+          wget --convert-links --mirror --adjust-extension --no-parent --wait=2 --recursive --page-requisites --level=inf --no-host-directories --directory-prefix=_site http://127.0.0.1:3000/
 
-      - name: Copy font files
+      - name: Ensure fonts directory exists
         run: |
           mkdir -p _site/assets/fonts
-          cp -r public/assets/fonts/* _site/assets/fonts/ || true
-          cp -r public/assets/*.{woff,woff2,ttf,eot,svg} _site/assets/ || true
+
+      - name: Copy assets
+        run: |
+          cp -r public/assets/* _site/assets/ || true
+          find public/assets -name "*.ttf" -exec cp {} _site/assets/fonts/ \; || true
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

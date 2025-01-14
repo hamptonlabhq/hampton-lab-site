@@ -21,7 +21,6 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
   config.assets.compile = true
-  config.assets.precompile += %w[*.png *.jpg *.jpeg *.gif *.svg *.eot *.ttf *.woff *.woff2]
   config.public_file_server.enabled = true
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
