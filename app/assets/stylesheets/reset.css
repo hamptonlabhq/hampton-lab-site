@@ -1,6 +1,8 @@
 /*
  * Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
+ *
+ * Modified slightly.
 */
 
 /* Box sizing rules */
@@ -19,6 +21,11 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+/* Modification for default margins */
+body {
+  margin: 0px auto;
 }
 
 p,
