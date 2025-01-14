@@ -27,6 +27,13 @@ jobs:
           bundle exec rails db:create
           bundle exec rails db:migrate
 
+      - name: Precompile assets
+        env:
+          RAILS_ENV: production
+          SECRET_KEY_BASE: dummy
+        run: |
+          bundle exec rails assets:precompile
+
       - name: Start Rails server in background
         run: |
           bundle exec rails server -d
