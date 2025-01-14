@@ -49,7 +49,7 @@
 /* Fonts */
 @font-face {
   font-family: "Neue Plak";
-  src: font-url("neue-plak-ultra-light.ttf") format("truetype");
+  src: font-url("/assets/neue-plak-ultra-light-f78ab124.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
