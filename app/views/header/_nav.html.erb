@@ -2,7 +2,7 @@
   <div class="nav__container">
     <div class="nav__logo">
       <%= link_to root_path do %>
-        <%= image_tag "logo-full-black.svg", {class: "nav__logo--icon"} %>
+        <%= render "header/logo" %>
       <% end %>
     </div>
     <div class="nav__links">
@@ -15,7 +15,9 @@
       <% end %>
     </div>
     <div class="nav__buttons">
-      <%= mail_to "waseem.mehany@hamptonlab.com", image_tag("mail-icon.svg", class: "nav__logo--icon") %>
+      <%= mail_to "waseem.mehany@hamptonlab.com" do %>
+        <%= render "header/mail_logo" %>
+      <% end %>
     </div>
     <!-- <label class="nav__toggle" for="nav-active" aria-label="Nav Toggle" tabindex="0"></label> -->
   </div>
