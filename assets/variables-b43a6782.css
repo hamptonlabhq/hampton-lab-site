@@ -38,7 +38,7 @@
   --border-width: 1px;
 
   /* Transitions */
-  --transition-scale-up: 1.05;
+  --transition-scale-up: 1.025;
   --transition-speed: 150ms;
   --transition-curve: ease-in-out;
 
