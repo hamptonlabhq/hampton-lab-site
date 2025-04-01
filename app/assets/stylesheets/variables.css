@@ -45,6 +45,9 @@
 
   /* Breakpoint */
   --media-breakpoint: 768px;
+
+  /* Specifics */
+  --nav-height: 3.75em;
 }
 
 /* Fonts */
@@ -118,10 +121,9 @@
 }
 
 :is(a) {
-  font-size: var(--font-medium);
-  font-weight: 300;
   font-size: var(--font-text);
   color: var(--color-link);
+  font-weight: 300;
   text-underline-offset: 0.06rem;
 }
 

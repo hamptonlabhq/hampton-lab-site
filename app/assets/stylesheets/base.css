@@ -4,6 +4,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   max-width: 80rem;
+  padding: calc(var(--nav-height) + var(--space-normal)) 0px;
 }
 
 main {
@@ -11,7 +12,6 @@ main {
   flex-direction: column;
   overflow-x: clip;
   overflow-y: hidden;
-  padding: var(--space-xx-large) 0px;
   position: relative;
   margin: 1rem 0rem;
 }
