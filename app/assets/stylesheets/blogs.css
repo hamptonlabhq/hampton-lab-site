@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: var(--space-medium);
   padding: 5px 10px;
   border-radius: var(--border-radius);
   box-shadow: 0 0 0 1px rgba(var(--rgb-black), 0.075);
