@@ -1,0 +1,62 @@
+.letters {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 10px;
+  width: 80%;
+  /* FIXME: */
+  max-width: 100%;
+}
+
+@media(max-width: 400px) {
+  .letters {
+    width: 100%;
+  }
+}
+
+.letter__container {
+  display: grid;
+  margin-inline: auto;
+  position: relative;
+  width: 90%;
+  height: max-content;
+}
+
+.letter__container::before,
+.letter__container::after {
+  content: "";
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 0 1px rgba(var(--rgb-black), 0.075);
+  border: var(--border-width) solid var(--border-color);
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: 99%;
+}
+
+.letter__container::before {
+  transform: rotate(-2.2deg) translate(0.4%, 0.1%);
+}
+
+.letter__container::after {
+  height: 97.1%;
+  transform: rotate(2.1deg) translate(0.2%, 1.5%)
+}
+
+.letters__main {
+  position: relative;
+  display: grid;
+  padding: 10% 7%;
+  margin: 0px auto;
+  background-color: var(--color-white);
+  box-shadow: 0 0 2px 4px rgba(var(--rgb-black), 0.075);
+  border-radius: var(--border-radius);
+  width: 100%;
+  border: var(--border-width) solid var(--border-color);
+  z-index: 3;
+}
+
+.letters__paragraph {
+  margin-bottom: var(--space-large);
+}
