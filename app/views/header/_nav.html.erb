@@ -10,8 +10,8 @@
         Founder letter.
       <% end %>
 
-      <%= link_to root_path do %>
-        Company.
+      <%= link_to blogs_path do %>
+        Blog.
       <% end %>
     </div>
     <div class="nav__buttons">
@@ -19,6 +19,8 @@
         <%= render "header/mail_logo" %>
       <% end %>
     </div>
+
+    <%= button_to "Log out", session_path, method: :delete if authenticated? %>
     <!-- <label class="nav__toggle" for="nav-active" aria-label="Nav Toggle" tabindex="0"></label> -->
   </div>
   <!-- <div class="nav__mobile">
