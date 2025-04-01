@@ -15,4 +15,5 @@ main {
   overflow-y: hidden;
   position: relative;
   margin: 1rem 0rem;
+  padding-bottom: var(--space-x-large);
 }
