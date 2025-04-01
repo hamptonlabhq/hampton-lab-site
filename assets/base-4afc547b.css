@@ -15,5 +15,11 @@ main {
   overflow-y: hidden;
   position: relative;
   margin: 1rem 0rem;
-  padding-bottom: var(--space-x-large);
+  padding: 0px var(--space-medium) var(--space-x-large) var(--space-medium);
+}
+
+@media(max-width: 48em) {
+  main {
+    padding: 0px var(--space-small) var(--space-x-large) var(--space-small);
+  }
 }

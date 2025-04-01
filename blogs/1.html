@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="zxIhg7s56dhVeI78dG4vnUzpGVqidiHFu4Dpv9pWJwG9CGACghv4Osl05aAR9mfhQzrkBishyROTNA5Bhmhzpg" />
+<meta name="csrf-token" content="qbOJsyL66TM7drNTXzCMfol8UW-VAuj_z4OdgWesKn3QRfxAtkmnNx7k4gzIpIR0nLJZVX86xxESypunsVOgWw" />
     
 
     
@@ -21,9 +21,9 @@
 
     <link rel="stylesheet" href="../assets/actiontext-e646701d.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/application-8b441ae0.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="../assets/base-ed11a8a1.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="../assets/blogs-583884c6.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="../assets/nav-afa94f8b.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/base-4afc547b.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/blogs-442e94ba.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/nav-b253bd3c.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/reset-007a8a8b.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/stacked-paper-eb6febe5.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/variables-38c3df79.css" data-turbo-track="reload" />
@@ -37,7 +37,8 @@
     "@rails/actiontext": "/assets/actiontext.esm-f1c04d34.js",
     "controllers/application": "/assets/controllers/application-3affb389.js",
     "controllers/hello_controller": "/assets/controllers/hello_controller-708796bd.js",
-    "controllers": "/assets/controllers/index-ee64e1f1.js"
+    "controllers": "/assets/controllers/index-ee64e1f1.js",
+    "controllers/nav_controller": "/assets/controllers/nav_controller-32385e9a.js"
   }
 }</script>
 <link rel="modulepreload" href="../assets/application-3da76259.js">
@@ -49,6 +50,7 @@
 <link rel="modulepreload" href="../assets/controllers/application-3affb389.js">
 <link rel="modulepreload" href="../assets/controllers/hello_controller-708796bd.js">
 <link rel="modulepreload" href="../assets/controllers/index-ee64e1f1.js">
+<link rel="modulepreload" href="../assets/controllers/nav_controller-32385e9a.js">
 <script type="module">import "application"</script>
 
     <!-- Google tag (gtag.js) -->
@@ -63,7 +65,8 @@
   </head>
 
   <body>
-    <!-- BEGIN app/views/blogs/show.html.erb --><!-- BEGIN app/views/header/_nav.html.erb --><nav class="nav">
+    <!-- BEGIN app/views/blogs/show.html.erb --><!-- BEGIN app/views/header/_nav.html.erb --><nav class="nav" data-controller="nav">
+  <!-- Navbar -->
   <div class="nav__container">
     <div class="nav__logo">
       <a href="../index.html">
@@ -81,28 +84,27 @@
 <!-- END app/views/header/_logo.html.erb -->
 </a>    </div>
     <div class="nav__links">
-      <a href="../index.html">
-        Founder letter.
-</a>
-      <a href="../blogs.html">
-        Blog.
-</a>    </div>
+      <a class="nav__link" href="../index.html">Founder letter</a>
+      <a class="nav__link" href="../blogs.html">Blog</a>
+    </div>
     <div class="nav__buttons">
       <a href="mailto:waseem.mehany@hamptonlab.com">
         <!-- BEGIN app/views/header/_mail_logo.html.erb --><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6M22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6M22 6L12 13L2 6" stroke="#313131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 <!-- END app/views/header/_mail_logo.html.erb -->
-</a>    </div>
+</a>      <!-- Nav toggle -->
+      <div class="nav__toggle" data-action="click->nav#toggle"></div>
 
-    
-    <!-- <label class="nav__toggle" for="nav-active" aria-label="Nav Toggle" tabindex="0"></label> -->
+      <!-- Logout -->
+      
+    </div>
   </div>
-  <!-- <div class="nav__mobile">
-    <a href="/customers" aria-label="Real world results">Real world results</a>
-    <a href="/#features" aria-label="Features">Features</a>
-    <a href="/pricing" aria-label="Pricing">Pricing</a>
-  </div> -->
+  <!-- Mobile -->
+  <div class="nav__mobile" data-nav-target="menu">
+    <a class="nav__link" href="../index.html">Founder letter</a>
+    <a class="nav__link" href="../blogs.html">Blog</a>
+  </div>
 </nav>
 <!-- END app/views/header/_nav.html.erb -->
 <main>
