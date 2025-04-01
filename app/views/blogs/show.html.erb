@@ -1,12 +1,13 @@
 <%= render "header/nav" %>
+<main>
+  <p style="color: green"><%= notice %></p>
 
-<p style="color: green"><%= notice %></p>
+  <%= render @blog %>
 
-<%= render @blog %>
+  <div>
+    <%= link_to "Edit this blog", edit_blog_path(@blog) if authenticated? %>
+    <%= link_to "Back to blogs", blogs_path %>
 
-<div>
-  <%= link_to "Edit this blog", edit_blog_path(@blog) if authenticated? %>
-  <%= link_to "Back to blogs", blogs_path %>
-
-  <%= button_to "Destroy this blog", @blog, method: :delete if authenticated? %>
-</div>
+    <%= button_to "Destroy this blog", @blog, method: :delete if authenticated? %>
+  </div>
+</main>
