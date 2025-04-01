@@ -36,6 +36,7 @@
   /* Strokes */
   --border-color: var(--color-gray-200);
   --border-width: 1px;
+  --border-radius: 0.25rem;
 
   /* Transitions */
   --transition-scale-up: 1.025;
