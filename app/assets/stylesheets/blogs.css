@@ -20,6 +20,12 @@
   width: 80%;
 }
 
+@media (max-width:48em) {
+  .blog__card {
+    width: 100%;
+  }
+}
+
 .blog__show {
   justify-self: center;
   display: flex;
