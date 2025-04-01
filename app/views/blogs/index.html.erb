@@ -1,21 +1,26 @@
 <%= render "header/nav" %>
 <main>
-<p style="color: green"><%= notice %></p>
+  <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Blogs" %>
+  <% content_for :title, "Blogs" %>
 
-<h1>A blog for nerds.</h1>
+  <h1>The vent.</h1>
 
-<div id="blogs" class="blog__feed">
-  <% @blogs.each do |blog| %>
-    <div class="blog__card">
-      <%= render blog %>
-      <p>
-        <%= link_to "Show this blog", blog, class: "blog__show" %>
-      </p>
-    </div>
-  <% end %>
-</div>
+  <div id="blogs" class="blog__feed">
+    <% @blogs.each do |blog| %>
+      <div class="blog__card">
+        <h2 class="blog__title">
+          <%= blog.title %>
+        </h2>
+        <p class="blog__content">
+          <%= truncate(blog.content.to_plain_text, length: 300) %>
+        </p>
+        <p>
+          <%= link_to "Show this blog", blog, class: "blog__show" %>
+        </p>
+      </div>
+    <% end %>
+  </div>
 
-<%= link_to "New blog", new_blog_path if authenticated?%>
-</div>
+  <%= link_to "New blog", new_blog_path if authenticated?%>
+</main>

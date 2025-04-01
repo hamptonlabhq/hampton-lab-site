@@ -42,13 +42,13 @@
   /* Transitions */
   --transition-scale-up: 1.025;
   --transition-speed: 150ms;
-  --transition-curve: ease-in-out;
+  --transition-curve: ease-in;
 
   /* Breakpoint */
   --media-breakpoint: 768px;
 
   /* Specifics */
-  --nav-height: 3em;
+  --nav-height: 2.75em;
 }
 
 /* Fonts */
@@ -131,4 +131,12 @@
 
 :where(.font-bold) {
   font-weight: 500;
+}
+
+div {
+  font-size: var(--font-text);
+  color: var(--color-text);
+  font-weight: 300;
+  margin-block: 0.25rem;
+  line-height: normal;
 }
