@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="tdR7zA7VyB3O6AIB8alakdg6OTdRzOk8WWpAYWq7ij85OcB3qbShxkB284F3JautRfsojODryBWxmTK8NpF67w" />
+<meta name="csrf-token" content="LMrEl0MSX21Ka2nLt2Kk6dBOvyOm3yvHEUUdFD3BFPq7vYEHQOqDnzp5g9yMHCvEhbnFcMfxXa-_dLBNrnLPYQ" />
     
 
     
@@ -21,12 +21,12 @@
 
     <link rel="stylesheet" href="assets/actiontext-e646701d.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="assets/application-8b441ae0.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="assets/base-83fcd902.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="assets/blogs-e8dc057d.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="assets/nav-149370f0.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="assets/base-ecd70c2d.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="assets/blogs-7fbd7dfb.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="assets/nav-afa94f8b.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="assets/reset-007a8a8b.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="assets/stacked-paper-9b549a86.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="assets/variables-3fabac89.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="assets/stacked-paper-0dfc2cc3.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="assets/variables-fe7cee3e.css" data-turbo-track="reload" />
     <script type="importmap" data-turbo-track="reload">{
   "imports": {
     "application": "/assets/application-3da76259.js",
@@ -135,16 +135,30 @@
   </div> -->
 </nav>
 <!-- END app/views/header/_nav.html.erb -->
-
+<main>
 <p style="color: green"></p>
 
 
-<h1>Blogs</h1>
+<h1>A blog for nerds.</h1>
 
-<div id="blogs">
+<div id="blogs" class="blog__feed">
+    <div class="blog__card">
+      <!-- BEGIN app/views/blogs/_blog.html.erb --><div id="blog_1" class="blog__post">
+  <h2 class="blog__title">Optimal macbook setup</h2>
+  <div class="blog__content"><!-- BEGIN app/views/layouts/action_text/contents/_content.html.erb --><div class="trix-content">
+  <!-- BEGIN /Users/waseem/.rbenv/versions/3.4.2/lib/ruby/gems/3.4.0/gems/actiontext-8.0.1/app/views/action_text/contents/_content.html.erb --><div>The machine: MacBook Air M3<br>Here is the list apps crucial to development:</div><ol><li>Alacritty</li><li>Zed</li></ol><div><br>You also need a window tiling manager.<br>I use yabai. I think it's the only one that actually works well on macs.</div>
+<!-- END /Users/waseem/.rbenv/versions/3.4.2/lib/ruby/gems/3.4.0/gems/actiontext-8.0.1/app/views/action_text/contents/_content.html.erb --></div>
+<!-- END app/views/layouts/action_text/contents/_content.html.erb --></div>
+</div>
+<!-- END app/views/blogs/_blog.html.erb -->
+      <p>
+        <a class="blog__show" href="blogs/1.html">Show this blog</a>
+      </p>
+    </div>
 </div>
 
 
+</div>
 <!-- END app/views/blogs/index.html.erb -->
   </body>
 </html>
