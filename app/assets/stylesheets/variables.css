@@ -1,6 +1,7 @@
 :root {
   /* Colors */
-  --color-bg: #fefcf7;
+  /* --color-bg: #fefcf7; */
+  --color-bg: #fff;
   --color-white: #ffffff;
   --color-brown: #f9f3ea;
   --color-black-100: #1d1d1f;
@@ -19,10 +20,10 @@
   --color-link: var(--color-blue-200);
 
   /* Font sizes */
-  --font-h1: 3.75rem;
-  --font-h2: 3.125rem;
-  --font-h3: 2.5rem;
-  --font-text: 1.5rem;
+  --font-h1: 3rem;
+  --font-h2: 1.75rem;
+  --font-h3: 1.5rem;
+  --font-text: 1.05rem;
   /* --font-text: 1.125rem; */
 
   /* Spaces: for padding, margins, and gaps */
@@ -47,7 +48,7 @@
   --media-breakpoint: 768px;
 
   /* Specifics */
-  --nav-height: 3.75em;
+  --nav-height: 3em;
 }
 
 /* Fonts */
@@ -96,6 +97,7 @@
   font-size: var(--font-h1);
   color: var(--color-text);
   font-weight: 500;
+  line-height: 1.1;
 }
 
 :is(h2) {
