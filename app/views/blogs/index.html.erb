@@ -13,10 +13,10 @@
           <%= blog.title %>
         </h2>
         <p class="blog__content">
-          <%= truncate(blog.content.to_plain_text, length: 300) %>
+          <%= truncate(blog.content.to_plain_text, length: 500) %>
         </p>
         <p>
-          <%= link_to "Show this blog", blog, class: "blog__show" %>
+          <%= link_to "Read more", blog, class: "blog__show" %>
         </p>
       </div>
     <% end %>

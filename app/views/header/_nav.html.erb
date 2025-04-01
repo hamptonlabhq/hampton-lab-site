@@ -1,4 +1,5 @@
-<nav class="nav">
+<nav class="nav" data-controller="nav">
+  <!-- Navbar -->
   <div class="nav__container">
     <div class="nav__logo">
       <%= link_to root_path do %>
@@ -6,26 +7,23 @@
       <% end %>
     </div>
     <div class="nav__links">
-      <%= link_to root_path do %>
-        Founder letter.
-      <% end %>
-
-      <%= link_to blogs_path do %>
-        Blog.
-      <% end %>
+      <%= link_to "Founder letter", root_path, class: "nav__link" %>
+      <%= link_to "Blog", blogs_path, class: "nav__link" %>
     </div>
     <div class="nav__buttons">
       <%= mail_to "waseem.mehany@hamptonlab.com" do %>
         <%= render "header/mail_logo" %>
       <% end %>
-    </div>
+      <!-- Nav toggle -->
+      <div class="nav__toggle" data-action="click->nav#toggle"></div>
 
-    <%= button_to "Log out", session_path, method: :delete if authenticated? %>
-    <!-- <label class="nav__toggle" for="nav-active" aria-label="Nav Toggle" tabindex="0"></label> -->
+      <!-- Logout -->
+      <%= button_to "Log out", session_path, method: :delete if authenticated? %>
+    </div>
   </div>
-  <!-- <div class="nav__mobile">
-    <a href="/customers" aria-label="Real world results">Real world results</a>
-    <a href="/#features" aria-label="Features">Features</a>
-    <a href="/pricing" aria-label="Pricing">Pricing</a>
-  </div> -->
+  <!-- Mobile -->
+  <div class="nav__mobile" data-nav-target="menu">
+    <%= link_to "Founder letter", root_path, class: "nav__link" %>
+    <%= link_to "Blog", blogs_path, class: "nav__link" %>
+  </div>
 </nav>
