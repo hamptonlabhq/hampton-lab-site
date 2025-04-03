@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="WXn-2YO7el86hCshToXgmnhE22Dnm4t3IXGaM_xfSz62zD11tun40jxpSEIA4so6EZGr6D6SzhQ2BNVA1_46sA" />
+<meta name="csrf-token" content="H_9veD9HmCFG0b6KZJt3sIN01spRZkGcFDQqayewxgzwSqzUChUarEA83ekq_F0Q6qGmQohvBP8DQWUYDBG3gg" />
     
 
     
@@ -110,18 +110,39 @@
 <main>
   <p style="color: green"></p>
 
-  <!-- BEGIN app/views/blogs/_blog.html.erb --><div id="blog_1" class="blog__post">
+  <!-- BEGIN app/views/blogs/_blog.html.erb --><div id="blog_2" class="blog__post">
   <h1 class="blog__title">
-    Optimal MacBook Setup
+    Yabai Walkthrough
   </h1>
   <p class="blog__content">
     <!-- BEGIN app/views/layouts/action_text/contents/_content.html.erb --><div class="trix-content">
-  <!-- BEGIN /Users/waseem/.rbenv/versions/3.4.2/lib/ruby/gems/3.4.0/gems/actiontext-8.0.1/app/views/action_text/contents/_content.html.erb --><div>Having a productivity optimized machine is a must.</div><div><br>My current device of choice is the MacBook Air M3. It's lightweight, and it is Unix-based—I can't stand Windows. The best operating system is probably Linux, but you can't compete with the hardware quality of the MacBooks.</div><div><br></div><div>Probably the most important thing for your machine is a tiling window manager. I use <a href="https://github.com/koekeishiya/yabai">yabai</a>. Even though I have to turn off some OS security features for yabai to fully work, the productivity outweighs all the cons. My yabai config file is very simple:</div><pre># Load scripting automatically
+  <!-- BEGIN /Users/waseem/.rbenv/versions/3.4.2/lib/ruby/gems/3.4.0/gems/actiontext-8.0.1/app/views/action_text/contents/_content.html.erb --><div>If you're trying to remove animations between Desktops (workspaces) in mac, keep reading.<br><em>Note: This guide is only for newer MacBooks (Apple Silicon macOS 13.x.x).<br><br></em>One of the best productivity boosts that I got was when I learned to rely on my keyboard more. It is a freedom untold to ditch the mouse. The underrated skill of maneuvering your machine with just your keyboard is beyond valuable to me. One of the best things you can do to rely more on your keyboard is to install a window tiling manager—like <a href="https://github.com/koekeishiya/yabai">yabai</a>.<br> <br>In this guide, I will walk you through how I set up yabai for my machine.<br><br><strong>1. Installation</strong></div><pre>brew install yabai</pre><div>Installing packages with homebrew is probably the easiest.<br><br><strong>2. Create config file</strong></div><pre>cd ~/.config/
+mkdir yabai
+cd yabai
+touch yabairc
+chmod +x yabairc</pre><div><br>For a basic yabairc file, add this in the yabairc:</div><pre># ~/.config/yabai/yabairc
+
+# Load scripting automatically
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
-# Remove window animation
-yabai -m config window_animation_duration 0.0</pre><div>I only use yabai to remove animations from switching Desktops (or workspaces).<br>I then create keyboard shortcuts to switch between Desktops.<br><br></div><div>Lastly, I use <a href="https://brew.sh/">homebrew</a> as my package manager. If a program is not on homebrew, I usually don't install it. This allows me to run</div><pre>brew upgrade</pre><div>to update all of my apps at once.<br>I can also run</div><pre>brew cleanup</pre><div>to remove any unnecessary/unused trailing packages</div>
+# Remove animations
+yabai -m config window_animation_duration 0.0</pre><div>There is so much more than you can do. I highly recommend you look through their <a href="https://github.com/koekeishiya/yabai/wiki">wiki</a>.<br><br><strong>3. Partially disable csrutil</strong></div><div><strong><em>A. Enter recovery mode.<br></em></strong>Shut down your Mac. Press and hold the Power button until “Loading startup options” appears. Click Options → Continue.<br>Then in the top bar, click Utilities → Terminal<br><br><strong><em>B. Disable fs, debugging, and nvram.<br></em></strong>Enter this on your terminal:</div><pre>csrutil enable --without fs --without debug --without nvram</pre><div>Restart mac after this.<br><br><strong><em>C. Enable non-Apple-signed arm64e binaries<br></em></strong>Open a new terminal and run this:</div><pre>sudo nvram boot-args=-arm64e_preview_abi</pre><div>Then restart again.<br><br><strong><em>D. Verify csrutil<br></em></strong>You can verify that System Integrity Protection is turned off by opening a new terminal and running:</div><pre>csrutil status</pre><div>It should return something like this:</div><pre>System Integrity Protection status: unknown (Custom Configuration).
+
+Configuration:
+	Apple Internal: disabled
+	Kext Signing: enabled
+	Filesystem Protections: disabled
+	Debugging Restrictions: disabled
+	DTrace Restrictions: enabled
+	NVRAM Protections: disabled
+	BaseSystem Verification: enabled
+	Boot-arg Restrictions: disabled
+	Kernel Integrity Protections: enabled
+	Authenticated Root Requirement: enabled
+
+This is an unsupported configuration, likely to break in the future and leave your machine in an unknown state.</pre><div>Great! Now you're ready to enable yabai.<br><br><strong>4. Start the yabai services<br></strong>Run this in your terminal:</div><pre>yabai --start-service
+sudo yabai --load-sa</pre><div>It'll ask you if yabai can control your control, follow the commands on the screen to enable this.<br>It should be under System Preferences → Security &amp; Privacy → Accessibility → yabai<br><br>Great. Now use your shortcuts to switch between Desktops (workspaces) and you should have no sliding animations.</div>
 <!-- END /Users/waseem/.rbenv/versions/3.4.2/lib/ruby/gems/3.4.0/gems/actiontext-8.0.1/app/views/action_text/contents/_content.html.erb --></div>
 <!-- END app/views/layouts/action_text/contents/_content.html.erb -->
   </p>
