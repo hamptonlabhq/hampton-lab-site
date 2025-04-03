@@ -23,3 +23,7 @@ main {
     padding: 0px var(--space-small) var(--space-x-large) var(--space-small);
   }
 }
+
+.text-center {
+  text-align: center;
+}
