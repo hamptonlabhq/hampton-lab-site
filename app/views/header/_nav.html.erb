@@ -1,29 +1,29 @@
+
 <nav class="nav" data-controller="nav">
-  <!-- Navbar -->
+  <!-- Logo -->
   <div class="nav__container">
     <div class="nav__logo">
       <%= link_to root_path do %>
         <%= render "header/logo" %>
       <% end %>
     </div>
+
+    <!-- Toggle -->
+    <div class="nav__toggle" data-action="click->nav#toggle"></div>
+  </div>
+
+  <!-- Menu -->
+  <div class="nav__menu" data-nav-target="menu">
+    <!-- <div class="nav__title">
+      <p>NAVIGATE</p>
+    </div> -->
     <div class="nav__links">
-      <%= link_to "Founder letter", root_path, class: "nav__link" %>
+      <%= link_to "Home", root_path, class: "nav__link" %>
+      <%= link_to "Founder letter", founder_letter_index_path, class: "nav__link" %>
       <%= link_to "Blog", blogs_path, class: "nav__link" %>
     </div>
-    <div class="nav__buttons">
-      <%= mail_to "waseem.mehany@hamptonlab.com" do %>
-        <%= render "header/mail_logo" %>
-      <% end %>
-      <!-- Nav toggle -->
-      <div class="nav__toggle" data-action="click->nav#toggle"></div>
+  </div>
 
-      <!-- Logout -->
-      <%= button_to "Log out", session_path, method: :delete if authenticated? %>
-    </div>
-  </div>
-  <!-- Mobile -->
-  <div class="nav__mobile" data-nav-target="menu">
-    <%= link_to "Founder letter", root_path, class: "nav__link" %>
-    <%= link_to "Blog", blogs_path, class: "nav__link" %>
-  </div>
+  <div class="nav__overlay" data-nav-target="overlay" data-action="click->nav#toggle"></div>
+
 </nav>

@@ -3,48 +3,51 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   top: 0;
   left: 0;
   user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
   width: 100%;
+  /* Will be determined by .nav__container */
   height: auto;
+  /* Base z-index for the entire navbar component */
   z-index: 100;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0.75em);
   -webkit-backdrop-filter: blur(0.75em);
+  transition: background-color var(--transition-speed) var(--transition-curve), backdrop-filter var(--transition-speed) var(--transition-curve);
 }
 
 .nav.active {
-  /* backdrop-filter: blur(0.75em); */
   background-color: white;
-  backdrop-filter: none;
-
+  backdrop-filter: blur(0);
 }
 
 .nav__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 100%;
-  max-height: var(--nav-height);
-  padding: 0px var(--space-small);
-
+  min-height: var(--nav-height);
+  padding: 0 var(--space-medium);
+  position: relative;
+  /* For z-index stacking context of children like toggle */
+  z-index: 103;
+  /* Highest, so the bar is always on top */
+  background-color: transparent;
+  /* So .nav's backdrop-filter or background shows through */
 }
 
 /* Left - logo */
 .nav__logo {
   align-items: center;
   display: flex;
-  height: 25px;
-  width: 25px;
-  flex: 1;
 }
 
 .nav__logo svg {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .nav__logo a:hover {
@@ -52,59 +55,19 @@
   transition: transform var(--transition-speed) var(--transition-curve);
 }
 
-/* Center links */
-.nav__links {
-  align-items: center;
-  display: flex;
-  flex: 0 0 auto;
-  gap: var(--space-small);
-}
-
-.nav__link {
-  display: flex;
-  white-space: nowrap;
-  font-weight: 500;
-  color: var(--color-text);
-}
-
-.nav__link:hover {
-  transform: scale(var(--transition-scale-up));
-  transition: transform var(--transition-speed) var(--transition-curve);
-}
-
-@media (max-width: 48em) {
-  .nav__links {
-    display: none;
-  }
-}
-
-/* Right - buttons */
-.nav__buttons {
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-  align-items: center;
-  gap: var(--space-small)
-}
-
-.nav__buttons svg {
-  display: flex;
-}
-
-.nav__buttons a:hover {
-  transform: scale(var(--transition-scale-up));
-  transition: transform var(--transition-speed) var(--transition-curve);
-}
-
+/* Nav toggle (Burger Icon) */
 .nav__toggle {
   display: grid;
   font-size: var(--font-size-normal);
-  width: 1.25em;
-  height: 1em;
-  /* margin-right: -0.5em; */
+  /* Affects em units for burger lines */
+  width: 1.5em;
+  /* Increased clickable area slightly */
+  height: 1.25em;
+  /* Increased clickable area slightly */
   place-items: center;
   position: relative;
   cursor: pointer;
+  /* z-index: 4; (Handled by nav__container's z-index) */
 }
 
 .nav__toggle::before,
@@ -113,43 +76,137 @@
   content: "";
   width: 1.25em;
   height: .125em;
-  margin: 0px;
   background: var(--color-text);
-  transition: transform var(--transition);
+  transition: transform var(--transition-speed) var(--transition-curve);
   will-change: transform;
+  /* If the click is on .nav__toggle itself */
   pointer-events: none;
+  /* Ensure rotation is around the center of the bars */
+  transform-origin: center;
 }
 
+/* Initial Burger state */
 .nav__toggle::before {
-  transform: translateY(-0.3em);
+  transform: translateY(-0.25em);
+  /* Adjust for desired spacing */
 }
 
 .nav__toggle::after {
-  transform: translateY(0.3em);
+  transform: translateY(0.25em);
+  /* Adjust for desired spacing */
 }
 
-.nav__toggle.active::before {}
+/* Active "X" state for Toggle */
+.nav__toggle.active::before {
+  transform: translateY(0) rotate(45deg);
+  background: var(--color-white);
 
-@media (min-width: 48em) {
-  .nav__toggle {
-    display: none;
-  }
 }
 
-.nav__mobile {
+.nav__toggle.active::after {
+  transform: translateY(0) rotate(-45deg);
+  background: var(--color-white);
+}
+
+/* Page Overlay */
+.nav__overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25);
+  /* Ensure it's above page content but below the menu/navbar */
+  z-index: 101;
+}
+
+.nav__overlay.active {
+  display: block;
+}
+
+/* Menu (Dropdown) */
+.nav__menu {
+  position: absolute;
+  /* top: var(--nav-height); */
+  /* right: var(--space-small); */
+  top: var(--space-small);
+  right: calc(var(--space-medium)/2);
   display: none;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  width: 100%;
+  align-items: stretch;
+  width: auto;
+  /* min-width: 220px; */
+  /* Give it a sensible minimum width */
   gap: var(--space-small);
-  margin: var(--space-small) 0px var(--space-medium) 0px;
-  padding: 0px var(--space-small);
-  /* text-align: center; */
+  padding: var(--space-medium);
+  background-color: #272E38;
+  z-index: 102;
+  /* Above overlay (101), below nav-bar (103) */
+  border-radius: var(--border-radius-lg);
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
+  overflow: hidden;
+  /* If using animations that might exceed bounds temporarily */
 }
 
-@media (max-width: 48em) {
-  .nav__mobile.active {
-    display: flex;
-  }
+.nav__menu.active {
+  display: flex;
+  /* Show when active */
+  /* Add animations for appearing/disappearing if desired, e.g., opacity or transform */
+  /* animation: fadeInMenu 0.3s var(--transition-curve) forwards; */
 }
+
+/* Optional: Fade-in animation for menu */
+/*
+@keyframes fadeInMenu {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+*/
+
+.nav__title {
+  padding-bottom: var(--space-small);
+  margin-bottom: var(--space-small);
+  color: var(--color-white);
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav__title p {
+  margin: 0;
+  color: var(--color-white);
+
+}
+
+/* Links within the Menu */
+.nav__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-small);
+}
+
+.nav__link {
+  /* display: block; */
+  white-space: nowrap;
+  color: white;
+  text-decoration: none;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  /* Added focus for accessibility */
+  text-decoration: underline;
+  /* Remove default focus outline if you style focus differently */
+}
+
+/*
+  The media query that was previously hiding .nav__links at <48em has been removed.
+  If .nav__links are exclusively inside .nav__menu (which is the mobile dropdown),
+  they should always be visible when the menu itself is active.
+*/
+/*
+  @media (max-width: 48em) {
+  // .nav__links {
+  // display: none; // This rule was problematic if links are only in the toggled menu.
+  // }
+  }
+*/

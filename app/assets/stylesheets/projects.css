@@ -1,0 +1,17 @@
+.project__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.project__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project__title {}
+
+.project__link {}
+
+.project__content {}
