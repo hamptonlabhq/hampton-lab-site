@@ -8,6 +8,7 @@
   --color-blue-100: #7aaff0;
   --color-blue-200: #409ceb;
   --color-blue-300: #46bee2;
+  --color-blue-400: #282E37;
   --color-gray-100: #f5f5f5;
   --color-gray-200: #ebebeb;
 
@@ -20,7 +21,7 @@
   --color-link: var(--color-blue-200);
 
   /* Font sizes */
-  --font-h1: 3rem;
+  --font-h1: 4rem;
   --font-h2: 1.75rem;
   --font-h3: 1.5rem;
   --font-text: 1.05rem;
@@ -104,6 +105,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  src: url("Basis Grotesque Pro Bold.otf");
+  font-weight: 700;
+  font-style: bold;
+}
+
 :is(h1, h2, h3) {
   font-family:
     "PP Eiko",
@@ -175,6 +183,66 @@ div {
   font-size: var(--font-text);
   color: var(--color-text);
   font-weight: 300;
-  margin-block: 0.25rem;
+  /* margin-block: 0.25rem; */
   line-height: normal;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xs) var(--space-medium);
+  background-color: var(--color-blue-400);
+  font-size: var(--font-h4);
+  color: var(--color-white);
+  font-weight: 400;
+  line-height: 1;
+  border-radius: var(--border-radius-lg);
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 0.2em;
+  transition: outline-color var(--transition-speed), outline-offset var(--transition-speed);
+
+}
+
+.btn:hover {
+  outline: 2px solid var(--color-black-100);
+  outline-offset: 0.05em;
+}
+
+.btn--secondary {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-blue-400);
+  color: var(--color-blue-400);
+  transition: background-color var(--transition-speed);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-blue-400);
+  color: var(--color-white);
+}
+
+.btn--outline {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-blue-400);
+  color: var(--color-blue-400);
+  transition: outline-color var(--transition-speed), outline-offset var(--transition-speed);
+}
+
+.btn--outline:hover {
+  outline: 2px solid var(--color-white);
+  outline-offset: 0.05em;
+}
+
+.btn--large {
+  margin-top: var(--space-medium);
+  font-size: var(--font-h3);
+  padding: var(--space-small) var(--space-medium);
+}
+
+
+.color-blue {
+  /* color: #31859e; */
+  /* color: var(--color-blue-400); */
+  text-decoration: underline;
 }
