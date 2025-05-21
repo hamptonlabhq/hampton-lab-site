@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "contact/index"
   get "founder_letter/index"
   get "about/index"
   resource :session

@@ -11,6 +11,7 @@
   width: 100%;
   /* Will be determined by .nav__container */
   height: auto;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   /* Base z-index for the entire navbar component */
   z-index: 100;
   backdrop-filter: blur(0.75em);
