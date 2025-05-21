@@ -1,43 +1,106 @@
 <%= render "header/nav" %>
-
 <main>
-  <h1 class="text-center">Custom websites for the price of Squarespace</h1>
+  <section class="hero">
+    <h1 class="text-center"><i>Custom websites</i> for the price of Squarespace</h1>
+    <p>We design, develop, and manage beautiful websites for $50/mo.</p>
 
-  <section>
-      <div class="section__container">
-        <!-- LA Years -->
-        <div class="project__card">
-          <div class="project__header">
-            <h2 class="project__title">Europe Treks</h2>
-            <%= link_to "Visit website", "https://europetreks.com", class: "project__link" %>
-          </div>
-          <div class="project__content">
+    <%= link_to "Explore", "https://europetreks.com", class: "btn btn--large" %>
+  </section>
+
+  <section data-controller="home" data-home-color-value="var(--color-beige)" data-home-default-color-value="var(--color-white)">
+    <div class="projects__container">
+      <!-- LA Years -->
+      <div class="project__card">
+        <div class="project__grid">
+          <!-- Project img -->
+          <div class="project__img">
             <%= image_tag("la-years.png") %>
           </div>
-        </div>
-
-        <!-- LA Years -->
-        <div class="project__card">
-          <div class="project__header">
-            <h2 class="project__title">Europe Treks</h2>
-            <%= link_to "Visit website", "https://europetreks.com", class: "project__link" %>
-          </div>
+          <!-- Project content -->
           <div class="project__content">
-            <%= image_tag("la-years.png") %>
+            <div class="project__header">
+              <h2 class="project__title">Europe Treks</h2>
+              <%= link_to "Visit website", "https://europetreks.com", class: "project__link" %>
+            </div>
+            <ul class="project__info">
+              <li class="project__info-item">
+                <p class="project__info-item--label">Client</p>
+                <p class="project__info-item--value">Europe Treks</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--label">Client</p>
+                <p class="project__info-item--value">Europe Treks</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--detail">Developed a something or other and did this or that and went here and there.</p>
+              </li>
+            </ul>
+            <%= link_to "Learn more", "https://europetreks.com", class: "btn btn--secondary project__btn" %>
           </div>
         </div>
-
-        <!-- LA Years -->
-        <div class="project__card">
-          <div class="project__header">
-            <h2 class="project__title">Europe Treks</h2>
-            <%= link_to "Visit website", "https://europetreks.com", class: "project__link" %>
-          </div>
-          <div class="project__content">
-            <%= image_tag("la-years.png") %>
-          </div>
-        </div>
-
       </div>
+      <!-- LA Years -->
+      <div class="project__card">
+        <div class="project__grid">
+          <!-- Project img -->
+          <div class="project__img">
+            <%= image_tag("la-years.png") %>
+          </div>
+          <!-- Project content -->
+          <div class="project__content">
+            <div class="project__header">
+              <h2 class="project__title">Europe Treks</h2>
+              <%= link_to "Visit website", "https://europetreks.com", class: "project__link" %>
+            </div>
+            <ul class="project__info">
+              <li class="project__info-item">
+                <p class="project__info-item--label">Client</p>
+                <p class="project__info-item--value">Europe Treks</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--label">Client</p>
+                <p class="project__info-item--value">Europe Treks</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--detail">Developed a something or other and did this or that and went here and there.</p>
+              </li>
+            </ul>
+            <%= link_to "Learn more", "https://europetreks.com", class: "btn btn--secondary project__btn" %>
+          </div>
+        </div>
+      </div>
+      <!-- LA Years -->
+      <div class="project__card">
+        <div class="project__grid">
+          <!-- Project img -->
+          <div class="project__img">
+            <%= image_tag("la-years.png") %>
+          </div>
+          <!-- Project content -->
+          <div class="project__content">
+            <div class="project__header">
+              <h2 class="project__title">Europe Treks</h2>
+              <%= link_to "Visit website", "https://europetreks.com", class: "project__link" %>
+            </div>
+            <ul class="project__info">
+              <li class="project__info-item">
+                <p class="project__info-item--label">Client</p>
+                <p class="project__info-item--value">Europe Treks</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--label">Client</p>
+                <p class="project__info-item--value">Europe Treks</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--detail">Developed a something or other and did this or that and went here and there.</p>
+              </li>
+            </ul>
+            <%= link_to "Learn more", "https://europetreks.com", class: "btn btn--secondary project__btn" %>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </main>
+
+<%= render "footer/nav" %>

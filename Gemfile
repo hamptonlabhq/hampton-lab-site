@@ -61,3 +61,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+
+gem 'erb-formatter'
+gem 'erb_lint' # Optional, for linting and autocorrect

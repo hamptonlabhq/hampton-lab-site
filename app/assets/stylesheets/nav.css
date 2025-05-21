@@ -21,6 +21,17 @@
 .nav.active {
   background-color: white;
   backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+}
+
+@media (max-width: 768px) {
+  .nav.active {
+    background-color: var(--color-blue-400);
+  }
+
+  .nav.active svg {
+    filter: invert(100%) sepia(24%) saturate(0%) hue-rotate(255deg) brightness(101%) contrast(104%);
+  }
 }
 
 .nav__container {
@@ -123,21 +134,27 @@
   display: block;
 }
 
+@media (max-width: 768px) {
+  .nav__overlay.active {
+    top: var(--nav-height);
+  }
+}
+
 /* Menu (Dropdown) */
 .nav__menu {
   position: absolute;
-  /* top: var(--nav-height); */
-  /* right: var(--space-small); */
   top: var(--space-small);
   right: calc(var(--space-medium)/2);
   display: none;
   flex-direction: column;
   align-items: stretch;
   width: auto;
+  max-width: 20rem;
+  min-width: 20rem;
   /* min-width: 220px; */
   /* Give it a sensible minimum width */
   gap: var(--space-small);
-  padding: var(--space-medium);
+  padding: var(--space-normal);
   background-color: #272E38;
   z-index: 102;
   /* Above overlay (101), below nav-bar (103) */
@@ -145,6 +162,16 @@
   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
   overflow: hidden;
   /* If using animations that might exceed bounds temporarily */
+}
+
+@media (max-width: 768px) {
+  .nav__menu {
+    top: var(--nav-height);
+    right: 0px;
+    left: 0px;
+    max-width: 100%;
+    border-radius: 0px 0px var(--border-radius-lg) var(--border-radius-lg);
+  }
 }
 
 .nav__menu.active {
@@ -162,18 +189,21 @@
 }
 */
 
-.nav__title {
-  padding-bottom: var(--space-small);
-  margin-bottom: var(--space-small);
-  color: var(--color-white);
-  font-size: 0.85em;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.nav__menu-container {
+  padding-inline: var(--space-small);
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .nav__title p {
   margin: 0;
   color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 
 }
 
@@ -182,13 +212,19 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-small);
+  margin-top: var(--space-medium);
+  padding-inline: var(--space-xs);
 }
 
 .nav__link {
-  /* display: block; */
+  display: block;
   white-space: nowrap;
   color: white;
   text-decoration: none;
+
+  font-size: var(--font-h3);
+
+  line-height: 1;
 }
 
 .nav__link:hover,
