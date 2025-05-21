@@ -80,6 +80,7 @@
 
 .project__info-item--value {
   text-align: right;
+  font-weight: bold;
 }
 
 .project__info-item--detail {
@@ -93,7 +94,10 @@
 
 .project__title {}
 
-.project__link {}
+.project__link {
+  text-decoration: none;
+  color: var(--color-text);
+}
 
 
 
