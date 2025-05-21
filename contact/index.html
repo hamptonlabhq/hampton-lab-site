@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="H_9veD9HmCFG0b6KZJt3sIN01spRZkGcFDQqayewxgzwSqzUChUarEA83ekq_F0Q6qGmQohvBP8DQWUYDBG3gg" />
+<meta name="csrf-token" content="N2004h6_bUIqxlR6C7kC4eKF5pol-BQNYHqx365WcGWFGDPlC_xdDP9NhyrNIaH9Nu3Y8BTusUNM1UE_saidhg" />
     
 
     
@@ -21,12 +21,14 @@
 
     <link rel="stylesheet" href="../assets/actiontext-e646701d.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/application-8b441ae0.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="../assets/base-6a02c05e.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/base-b6087d7c.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/blogs-8ff6c337.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="../assets/nav-cc2e9d8d.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/home-1692d088.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/nav-8ce938e4.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/projects-08664b74.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/reset-007a8a8b.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/stacked-paper-eb6febe5.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="../assets/variables-38c3df79.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/variables-4b12a1dc.css" data-turbo-track="reload" />
     <script type="importmap" data-turbo-track="reload">{
   "imports": {
     "application": "/assets/application-67e93d4a.js",
@@ -37,8 +39,10 @@
     "@rails/actiontext": "/assets/actiontext.esm-f1c04d34.js",
     "controllers/application": "/assets/controllers/application-3affb389.js",
     "controllers/hello_controller": "/assets/controllers/hello_controller-708796bd.js",
+    "controllers/home_controller": "/assets/controllers/home_controller-004f47d6.js",
     "controllers": "/assets/controllers/index-ee64e1f1.js",
-    "controllers/nav_controller": "/assets/controllers/nav_controller-32385e9a.js"
+    "controllers/nav_controller": "/assets/controllers/nav_controller-72d1a8bf.js",
+    "controllers/section_bg_controller": "/assets/controllers/section_bg_controller-031874eb.js"
   }
 }</script>
 <link rel="modulepreload" href="../assets/application-67e93d4a.js">
@@ -49,8 +53,10 @@
 <link rel="modulepreload" href="../assets/actiontext.esm-f1c04d34.js">
 <link rel="modulepreload" href="../assets/controllers/application-3affb389.js">
 <link rel="modulepreload" href="../assets/controllers/hello_controller-708796bd.js">
+<link rel="modulepreload" href="../assets/controllers/home_controller-004f47d6.js">
 <link rel="modulepreload" href="../assets/controllers/index-ee64e1f1.js">
-<link rel="modulepreload" href="../assets/controllers/nav_controller-32385e9a.js">
+<link rel="modulepreload" href="../assets/controllers/nav_controller-72d1a8bf.js">
+<link rel="modulepreload" href="../assets/controllers/section_bg_controller-031874eb.js">
 <script type="module">import "application"</script>
 
     <!-- Google tag (gtag.js) -->
@@ -65,8 +71,8 @@
   </head>
 
   <body>
-    <!-- BEGIN app/views/blogs/show.html.erb --><!-- BEGIN app/views/header/_nav.html.erb --><nav class="nav" data-controller="nav">
-  <!-- Navbar -->
+    <!-- BEGIN app/views/contact/index.html.erb --><!-- BEGIN app/views/header/_nav.html.erb --><nav class="nav" data-controller="nav">
+  <!-- Logo -->
   <div class="nav__container">
     <div class="nav__logo">
       <a href="../index.html">
@@ -83,80 +89,38 @@
 </svg>
 <!-- END app/views/header/_logo.html.erb -->
 </a>    </div>
-    <div class="nav__links">
-      <a class="nav__link" href="../index.html">Founder letter</a>
-      <a class="nav__link" href="../blogs.html">Blog</a>
+    <!-- Toggle -->
+    <div class="nav__toggle" data-action="click->nav#toggle"></div>
+  </div>
+  <!-- Menu -->
+  <div class="nav__menu" data-nav-target="menu">
+    <div class="nav__menu-container">
+      <div class="nav__title">
+        <p>NAVIGATE</p>
+        <!-- Add icon -->
+      </div>
+      <div class="nav__links">
+        <a class="nav__link" href="../index.html">Home</a>
+        <a class="nav__link" href="../founder_letter/index.html">Founder letter</a>
+        <a class="nav__link" href="../about/index.html">About</a>
+      </div>
+      <a class="btn btn--outline btn--large" href="index.html">Contact</a>
     </div>
-    <div class="nav__buttons">
-      <a href="mailto:waseem.mehany@hamptonlab.com">
-        <!-- BEGIN app/views/header/_mail_logo.html.erb --><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6M22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6M22 6L12 13L2 6" stroke="#313131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<!-- END app/views/header/_mail_logo.html.erb -->
-</a>      <!-- Nav toggle -->
-      <div class="nav__toggle" data-action="click->nav#toggle"></div>
+  </div>
 
-      <!-- Logout -->
-      
-    </div>
-  </div>
-  <!-- Mobile -->
-  <div class="nav__mobile" data-nav-target="menu">
-    <a class="nav__link" href="../index.html">Founder letter</a>
-    <a class="nav__link" href="../blogs.html">Blog</a>
-  </div>
+  <div class="nav__overlay" data-nav-target="overlay" data-action="click->nav#toggle"></div>
 </nav>
 <!-- END app/views/header/_nav.html.erb -->
 <main>
-  <p style="color: green"></p>
+  <section class="hero">
+    <h1 class="text-center"><i>Contact</i></h1>
+  </section>
 
-  <!-- BEGIN app/views/blogs/_blog.html.erb --><div id="blog_2" class="blog__post">
-  <h1 class="blog__title">
-    Yabai Walkthrough
-  </h1>
-  <p class="blog__content">
-    <!-- BEGIN app/views/layouts/action_text/contents/_content.html.erb --><div class="trix-content">
-  <!-- BEGIN /Users/waseem/.rbenv/versions/3.4.2/lib/ruby/gems/3.4.0/gems/actiontext-8.0.1/app/views/action_text/contents/_content.html.erb --><div>If you're trying to remove animations between Desktops (workspaces) in mac, keep reading.<br><em>Note: This guide is only for newer MacBooks (Apple Silicon macOS 13.x.x).<br><br></em>One of the best productivity boosts that I got was when I learned to rely on my keyboard more. It is a freedom untold to ditch the mouse. The underrated skill of maneuvering your machine with just your keyboard is beyond valuable to me. One of the best things you can do to rely more on your keyboard is to install a window tiling manager—like <a href="https://github.com/koekeishiya/yabai">yabai</a>.<br> <br>In this guide, I will walk you through how I set up yabai for my machine.<br><br><strong>1. Installation</strong></div><pre>brew install yabai</pre><div>Installing packages with homebrew is probably the easiest.<br><br><strong>2. Create config file</strong></div><pre>cd ~/.config/
-mkdir yabai
-cd yabai
-touch yabairc
-chmod +x yabairc</pre><div><br>For a basic yabairc file, add this in the yabairc:</div><pre># ~/.config/yabai/yabairc
-
-# Load scripting automatically
-yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-sudo yabai --load-sa
-
-# Remove animations
-yabai -m config window_animation_duration 0.0</pre><div>There is so much more than you can do. I highly recommend you look through their <a href="https://github.com/koekeishiya/yabai/wiki">wiki</a>.<br><br><strong>3. Partially disable csrutil</strong></div><div><strong><em>A. Enter recovery mode.<br></em></strong>Shut down your Mac. Press and hold the Power button until “Loading startup options” appears. Click Options → Continue.<br>Then in the top bar, click Utilities → Terminal<br><br><strong><em>B. Disable fs, debugging, and nvram.<br></em></strong>Enter this on your terminal:</div><pre>csrutil enable --without fs --without debug --without nvram</pre><div>Restart mac after this.<br><br><strong><em>C. Enable non-Apple-signed arm64e binaries<br></em></strong>Open a new terminal and run this:</div><pre>sudo nvram boot-args=-arm64e_preview_abi</pre><div>Then restart again.<br><br><strong><em>D. Verify csrutil<br></em></strong>You can verify that System Integrity Protection is turned off by opening a new terminal and running:</div><pre>csrutil status</pre><div>It should return something like this:</div><pre>System Integrity Protection status: unknown (Custom Configuration).
-
-Configuration:
-	Apple Internal: disabled
-	Kext Signing: enabled
-	Filesystem Protections: disabled
-	Debugging Restrictions: disabled
-	DTrace Restrictions: enabled
-	NVRAM Protections: disabled
-	BaseSystem Verification: enabled
-	Boot-arg Restrictions: disabled
-	Kernel Integrity Protections: enabled
-	Authenticated Root Requirement: enabled
-
-This is an unsupported configuration, likely to break in the future and leave your machine in an unknown state.</pre><div>Great! Now you're ready to enable yabai.<br><br><strong>4. Start the yabai services<br></strong>Run this in your terminal:</div><pre>yabai --start-service
-sudo yabai --load-sa</pre><div>It'll ask you if yabai can control your control, follow the commands on the screen to enable this.<br>It should be under System Preferences → Security &amp; Privacy → Accessibility → yabai<br><br>Great. Now use your shortcuts to switch between Desktops (workspaces) and you should have no sliding animations.</div>
-<!-- END /Users/waseem/.rbenv/versions/3.4.2/lib/ruby/gems/3.4.0/gems/actiontext-8.0.1/app/views/action_text/contents/_content.html.erb --></div>
-<!-- END app/views/layouts/action_text/contents/_content.html.erb -->
-  </p>
-</div>
-<!-- END app/views/blogs/_blog.html.erb -->
-
-  <div>
-    
-    <a href="../blogs.html">Back to blogs</a>
-
-    
-  </div>
+  <section></section>
 </main>
-<!-- END app/views/blogs/show.html.erb -->
+
+<!-- BEGIN app/views/footer/_nav.html.erb --><!-- END app/views/footer/_nav.html.erb -->
+<!-- END app/views/contact/index.html.erb -->
   </body>
 </html>
 <!-- END app/views/layouts/application.html.erb -->

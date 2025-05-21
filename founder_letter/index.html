@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="WXn-2YO7el86hCshToXgmnhE22Dnm4t3IXGaM_xfSz62zD11tun40jxpSEIA4so6EZGr6D6SzhQ2BNVA1_46sA" />
+<meta name="csrf-token" content="ToFmtqjb67mPgkvoHoHeKFmyf2g6o8i2mrVVHRiOVPr89GGxvZjb91oJmLjYGX00jdpBAgu1bfi2GqX9B3C5GQ" />
     
 
     
@@ -21,12 +21,14 @@
 
     <link rel="stylesheet" href="../assets/actiontext-e646701d.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/application-8b441ae0.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="../assets/base-6a02c05e.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/base-b6087d7c.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/blogs-8ff6c337.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="../assets/nav-cc2e9d8d.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/home-1692d088.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/nav-8ce938e4.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/projects-08664b74.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/reset-007a8a8b.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/stacked-paper-eb6febe5.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="../assets/variables-38c3df79.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/variables-4b12a1dc.css" data-turbo-track="reload" />
     <script type="importmap" data-turbo-track="reload">{
   "imports": {
     "application": "/assets/application-67e93d4a.js",
@@ -37,8 +39,10 @@
     "@rails/actiontext": "/assets/actiontext.esm-f1c04d34.js",
     "controllers/application": "/assets/controllers/application-3affb389.js",
     "controllers/hello_controller": "/assets/controllers/hello_controller-708796bd.js",
+    "controllers/home_controller": "/assets/controllers/home_controller-004f47d6.js",
     "controllers": "/assets/controllers/index-ee64e1f1.js",
-    "controllers/nav_controller": "/assets/controllers/nav_controller-32385e9a.js"
+    "controllers/nav_controller": "/assets/controllers/nav_controller-72d1a8bf.js",
+    "controllers/section_bg_controller": "/assets/controllers/section_bg_controller-031874eb.js"
   }
 }</script>
 <link rel="modulepreload" href="../assets/application-67e93d4a.js">
@@ -49,8 +53,10 @@
 <link rel="modulepreload" href="../assets/actiontext.esm-f1c04d34.js">
 <link rel="modulepreload" href="../assets/controllers/application-3affb389.js">
 <link rel="modulepreload" href="../assets/controllers/hello_controller-708796bd.js">
+<link rel="modulepreload" href="../assets/controllers/home_controller-004f47d6.js">
 <link rel="modulepreload" href="../assets/controllers/index-ee64e1f1.js">
-<link rel="modulepreload" href="../assets/controllers/nav_controller-32385e9a.js">
+<link rel="modulepreload" href="../assets/controllers/nav_controller-72d1a8bf.js">
+<link rel="modulepreload" href="../assets/controllers/section_bg_controller-031874eb.js">
 <script type="module">import "application"</script>
 
     <!-- Google tag (gtag.js) -->
@@ -65,8 +71,8 @@
   </head>
 
   <body>
-    <!-- BEGIN app/views/blogs/show.html.erb --><!-- BEGIN app/views/header/_nav.html.erb --><nav class="nav" data-controller="nav">
-  <!-- Navbar -->
+    <!-- BEGIN app/views/founder_letter/index.html.erb --><!-- BEGIN app/views/header/_nav.html.erb --><nav class="nav" data-controller="nav">
+  <!-- Logo -->
   <div class="nav__container">
     <div class="nav__logo">
       <a href="../index.html">
@@ -83,59 +89,75 @@
 </svg>
 <!-- END app/views/header/_logo.html.erb -->
 </a>    </div>
-    <div class="nav__links">
-      <a class="nav__link" href="../index.html">Founder letter</a>
-      <a class="nav__link" href="../blogs.html">Blog</a>
+    <!-- Toggle -->
+    <div class="nav__toggle" data-action="click->nav#toggle"></div>
+  </div>
+  <!-- Menu -->
+  <div class="nav__menu" data-nav-target="menu">
+    <div class="nav__menu-container">
+      <div class="nav__title">
+        <p>NAVIGATE</p>
+        <!-- Add icon -->
+      </div>
+      <div class="nav__links">
+        <a class="nav__link" href="../index.html">Home</a>
+        <a class="nav__link" href="index.html">Founder letter</a>
+        <a class="nav__link" href="../about/index.html">About</a>
+      </div>
+      <a class="btn btn--outline btn--large" href="../contact/index.html">Contact</a>
     </div>
-    <div class="nav__buttons">
-      <a href="mailto:waseem.mehany@hamptonlab.com">
-        <!-- BEGIN app/views/header/_mail_logo.html.erb --><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6M22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6M22 6L12 13L2 6" stroke="#313131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<!-- END app/views/header/_mail_logo.html.erb -->
-</a>      <!-- Nav toggle -->
-      <div class="nav__toggle" data-action="click->nav#toggle"></div>
+  </div>
 
-      <!-- Logout -->
-      
-    </div>
-  </div>
-  <!-- Mobile -->
-  <div class="nav__mobile" data-nav-target="menu">
-    <a class="nav__link" href="../index.html">Founder letter</a>
-    <a class="nav__link" href="../blogs.html">Blog</a>
-  </div>
+  <div class="nav__overlay" data-nav-target="overlay" data-action="click->nav#toggle"></div>
 </nav>
 <!-- END app/views/header/_nav.html.erb -->
+
 <main>
-  <p style="color: green"></p>
+  <!-- Intro -->
+  <section class="hero">
+    <h1 class="text-center">A company <i>forged</i> out of frustration.</h1>
+  </section>
+  <h1 class="text-center"></h1>
 
-  <!-- BEGIN app/views/blogs/_blog.html.erb --><div id="blog_1" class="blog__post">
-  <h1 class="blog__title">
-    Optimal MacBook Setup
-  </h1>
-  <p class="blog__content">
-    <!-- BEGIN app/views/layouts/action_text/contents/_content.html.erb --><div class="trix-content">
-  <!-- BEGIN /Users/waseem/.rbenv/versions/3.4.2/lib/ruby/gems/3.4.0/gems/actiontext-8.0.1/app/views/action_text/contents/_content.html.erb --><div>Having a productivity optimized machine is a must.</div><div><br>My current device of choice is the MacBook Air M3. It's lightweight, and it is Unix-based—I can't stand Windows. The best operating system is probably Linux, but you can't compete with the hardware quality of the MacBooks.</div><div><br></div><div>Probably the most important thing for your machine is a tiling window manager. I use <a href="https://github.com/koekeishiya/yabai">yabai</a>. Even though I have to turn off some OS security features for yabai to fully work, the productivity outweighs all the cons. My yabai config file is very simple:</div><pre># Load scripting automatically
-yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-sudo yabai --load-sa
-
-# Remove window animation
-yabai -m config window_animation_duration 0.0</pre><div>I only use yabai to remove animations from switching Desktops (or workspaces).<br>I then create keyboard shortcuts to switch between Desktops.<br><br></div><div>Lastly, I use <a href="https://brew.sh/">homebrew</a> as my package manager. If a program is not on homebrew, I usually don't install it. This allows me to run</div><pre>brew upgrade</pre><div>to update all of my apps at once.<br>I can also run</div><pre>brew cleanup</pre><div>to remove any unnecessary/unused trailing packages</div>
-<!-- END /Users/waseem/.rbenv/versions/3.4.2/lib/ruby/gems/3.4.0/gems/actiontext-8.0.1/app/views/action_text/contents/_content.html.erb --></div>
-<!-- END app/views/layouts/action_text/contents/_content.html.erb -->
-  </p>
-</div>
-<!-- END app/views/blogs/_blog.html.erb -->
-
-  <div>
-    
-    <a href="../blogs.html">Back to blogs</a>
-
-    
+  <!-- Stacked paper effect -->
+  <div class="letters">
+    <div class="letter__container">
+      <div class="letters__main">
+        <div class="letters__paragraph">
+          <h2>Ever try to hire a web design agency?</h2>
+          <p>I have. It sucks.
+          <br>
+          Picking from the plethora of options out there and the overly bloated service agencies is almost impossible. It is getting harder and harder to find a group of guys who just make really good websites.
+          <br>
+          Anytime I get a proposal from a service agency, I always find myself flipping to the last page to see how much it’ll cost and how long it will take. The overly “salesy” tactics are getting old. Almost everything we are presented with does not relate to us and leave us with less confidence and more decision fatigue. Worse yet, imagine if you get a surprise bill at the end of the cycle with things you never knew you asked for.</p>
+        </div>
+        <div class="letters__paragraph">
+          <h2>But, hey, at least you can do it yourself right?</h2>
+          <p>Yes, you definitely can. But which platform are you going to choose? Wordpress? Squarespace? Wix? Webflow? GoDaddy? HubSpot? Weebly? Shopify? Duda? Strinkingly? You get the point. Good luck trying to weigh your options and making a decision there.
+          <br>
+          And let’s say you do make a decision. Then your website will look like every other generic template out there with no soul but a super futuristic look that feels like it could be an ad for SpaceX.</p>
+        </div>
+        <div class="letters__paragraph">
+          <h2>Here is the truth.</h2>
+          <p>Getting on the web shouldn’t be complicated.
+          <br>
+          Web design agencies have become bloated with big offices and too many employees.
+          <br>
+          Nobody has access to “propriety” tools that are hidden from everybody else.
+          <br>
+          Creative work cannot be outsourced to AI or a cheap agency in India or China.</p>
+        </div>
+        <div class="letters__paragraph">
+          <h2>This is why I started Hampton Lab.</h2>
+          <p>I started Hampton Lab because I love simplicity. You should know what you’re getting, when you’re getting it, and what you’re paying for it. Services should be at a fixed price and you should pay one time for your website. No fuss.
+          <br>
+          We are really good at we do and we think our work will speak for itself.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
-<!-- END app/views/blogs/show.html.erb -->
+<!-- END app/views/founder_letter/index.html.erb -->
   </body>
 </html>
 <!-- END app/views/layouts/application.html.erb -->

@@ -1,10 +1,11 @@
 body {
-  background: var(--color-bg);
+  background: var(--color-white);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   max-width: 80rem;
   padding: calc(var(--nav-height) + var(--space-normal)) 0px;
+  transition: background-color var(--transition-speed) var(--transition-curve);
 }
 
 main {
@@ -16,6 +17,8 @@ main {
   position: relative;
   margin: 1rem 0rem;
   padding: 0px var(--space-medium) var(--space-x-large) var(--space-medium);
+  /* max-width: 64rem; */
+  align-self: center;
 }
 
 @media(max-width: 48em) {
@@ -26,4 +29,9 @@ main {
 
 .text-center {
   text-align: center;
+}
+
+
+section {
+  margin: var(--space-x-large) 0;
 }
