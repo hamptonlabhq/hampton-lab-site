@@ -3,8 +3,8 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
-  padding-top: var(--space-normal);
-  row-gap: var(--space-normal);
+  padding-top: var(--space-sm);
+  row-gap: var(--space-sm);
 }
 
 .blog__card {
@@ -15,7 +15,7 @@
   /* box-shadow: 0 0 0 1px rgba(var(--rgb-black), 0.075); */
   box-shadow: 0 4.5810809135px 22.9054050446px 0 #a4abb71f, 0 12.2162160873px 18.3243236542px 0 #6b738424, 0 6.1081080437px 7.6351351738px 0 #3e405433;
   border: var(--border-width) solid var(--border-color);
-  /* padding: var(--space-large) var(--space-large); */
+  /* padding: var(--space-lg) var(--space-lg); */
   padding: 30px;
   max-width: 50rem;
   width: 80%;
@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: var(--space-small);
+  margin-top: var(--space-xs);
   padding: 5px 10px;
   border-radius: var(--border-radius);
   box-shadow: 0 0 0 1px rgba(var(--rgb-black), 0.075);
