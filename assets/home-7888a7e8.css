@@ -11,3 +11,7 @@
   font-size: var(--font-h3);
   padding: var(--space-small) var(--space-medium);
 }
+
+.hero p {
+  margin-inline: var(--space-medium);
+}
