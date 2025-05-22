@@ -29,13 +29,13 @@
   --font-h1-mobile: 2.5rem;
 
   /* Spaces: for padding, margins, and gaps */
-  --space-xs: 0.5rem;
-  --space-small: 0.75rem;
-  --space-normal: 1.5rem;
-  --space-medium: 2.5rem;
-  --space-large: 3rem;
-  --space-x-large: 4rem;
-  --space-xx-large: 5rem;
+  --space-xxs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1.5rem;
+  --space-md: 2.5rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
+  --space-xxl: 5rem;
 
   /* Strokes */
   --border-color: var(--color-gray-200);
@@ -198,7 +198,7 @@ div {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-xs) var(--space-medium);
+  padding: var(--space-xxs) var(--space-md);
   background-color: var(--color-blue-400);
   font-size: var(--font-h4);
   color: var(--color-white);
@@ -242,9 +242,9 @@ div {
 }
 
 .btn--large {
-  margin-top: var(--space-medium);
+  margin-top: var(--space-md);
   font-size: var(--font-h3);
-  padding: var(--space-small) var(--space-medium);
+  padding: var(--space-xs) var(--space-md);
 }
 
 

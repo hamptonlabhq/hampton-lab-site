@@ -41,7 +41,7 @@
   justify-content: space-between;
   width: 100%;
   min-height: var(--nav-height);
-  padding: 0 var(--space-medium);
+  padding: 0 var(--space-md);
   position: relative;
   /* For z-index stacking context of children like toggle */
   z-index: 103;
@@ -144,8 +144,8 @@
 /* Menu (Dropdown) */
 .nav__menu {
   position: absolute;
-  top: var(--space-small);
-  right: calc(var(--space-medium)/2);
+  top: var(--space-xs);
+  right: calc(var(--space-md)/2);
   display: none;
   flex-direction: column;
   align-items: stretch;
@@ -154,8 +154,8 @@
   min-width: 20rem;
   /* min-width: 220px; */
   /* Give it a sensible minimum width */
-  gap: var(--space-small);
-  padding: var(--space-normal);
+  gap: var(--space-xs);
+  padding: var(--space-sm);
   background-color: #272E38;
   z-index: 102;
   /* Above overlay (101), below nav-bar (103) */
@@ -191,7 +191,7 @@
 */
 
 .nav__menu-container {
-  padding-inline: var(--space-small);
+  padding-inline: var(--space-xs);
   display: flex;
   align-items: start;
   flex-direction: column;
@@ -212,9 +212,9 @@
 .nav__links {
   display: flex;
   flex-direction: column;
-  gap: var(--space-small);
-  margin-top: var(--space-medium);
-  padding-inline: var(--space-xs);
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+  padding-inline: var(--space-xxs);
 }
 
 .nav__link {

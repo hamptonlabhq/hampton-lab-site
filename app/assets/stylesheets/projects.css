@@ -1,7 +1,7 @@
 .projects__container {
   display: flex;
   flex-direction: column;
-  gap: var(--space-large);
+  gap: var(--space-lg);
 }
 
 .project__card {
@@ -47,7 +47,7 @@
 
 .project__content {
   grid-column: span 4;
-  padding: var(--space-normal) var(--space-medium);
+  padding: var(--space-sm) var(--space-md);
   display: flex;
   flex-direction: column;
   min-height: 500px;
