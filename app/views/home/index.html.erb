@@ -9,36 +9,6 @@
 
   <section data-controller="home" data-home-color-value="var(--color-beige)" data-home-default-color-value="var(--color-white)" id="projects">
     <div class="projects__container">
-      <!-- UTF -->
-      <div class="project__card">
-        <div class="project__grid">
-          <!-- Project img -->
-          <div class="project__img">
-            <%= image_tag("utf.jpg") %>
-          </div>
-          <!-- Project content -->
-          <div class="project__content">
-            <div class="project__header">
-              <h2 class="project__title">Upon The Foundation</h2>
-              <%= link_to "Visit website &#8594;".html_safe, "https://uponthefoundation.com", class: "project__link" %>
-            </div>
-            <ul class="project__info">
-              <li class="project__info-item">
-                <p class="project__info-item--label">Client</p>
-                <p class="project__info-item--value">Upon The Foundation</p>
-              </li>
-              <li class="project__info-item">
-                <p class="project__info-item--label">Project</p>
-                <p class="project__info-item--value">Website</p>
-              </li>
-              <li class="project__info-item">
-                <p class="project__info-item--detail">A website focused on basic Christian truths.</p>
-              </li>
-            </ul>
-            <%= link_to "Learn more", "https://uponthefoundation.com", class: "btn btn--secondary project__btn" %>
-          </div>
-        </div>
-      </div>
       <!-- LA Years -->
       <div class="project__card">
         <div class="project__grid">
@@ -66,6 +36,36 @@
               </li>
             </ul>
             <%= link_to "Learn more", "https://layears.org", class: "btn btn--secondary project__btn" %>
+          </div>
+        </div>
+      </div>
+      <!-- UTF -->
+      <div class="project__card">
+        <div class="project__grid">
+          <!-- Project img -->
+          <div class="project__img">
+            <%= image_tag("utf.jpg") %>
+          </div>
+          <!-- Project content -->
+          <div class="project__content">
+            <div class="project__header">
+              <h2 class="project__title">Upon The Foundation</h2>
+              <%= link_to "Visit website &#8594;".html_safe, "https://uponthefoundation.com", class: "project__link" %>
+            </div>
+            <ul class="project__info">
+              <li class="project__info-item">
+                <p class="project__info-item--label">Client</p>
+                <p class="project__info-item--value">Upon The Foundation</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--label">Project</p>
+                <p class="project__info-item--value">Website</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--detail">A website focused on basic Christian truths.</p>
+              </li>
+            </ul>
+            <%= link_to "Learn more", "https://uponthefoundation.com", class: "btn btn--secondary project__btn" %>
           </div>
         </div>
       </div>
