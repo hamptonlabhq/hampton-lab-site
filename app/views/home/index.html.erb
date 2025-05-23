@@ -3,7 +3,6 @@
   <section class="hero">
     <h1 class="text-center"><i>Custom websites</i> for the price of Squarespace</h1>
     <p class="text-center">We design, develop, and manage beautiful websites for $50/mo.</p>
-
     <%= link_to "Explore", "#projects", class: "btn btn--large" %>
   </section>
 
@@ -36,6 +35,36 @@
               </li>
             </ul>
             <%= link_to "Learn more", "https://layears.org", class: "btn btn--secondary project__btn" %>
+          </div>
+        </div>
+      </div>
+      <!-- Sancerra -->
+      <div class="project__card">
+        <div class="project__grid">
+          <!-- Project img -->
+          <div class="project__img">
+            <%= image_tag("sancerra.jpg") %>
+          </div>
+          <!-- Project content -->
+          <div class="project__content">
+            <div class="project__header">
+              <h2 class="project__title">Sancerra</h2>
+              <%= link_to "Visit website &#8594;".html_safe, "https://sancerra.com", class: "project__link" %>
+            </div>
+            <ul class="project__info">
+              <li class="project__info-item">
+                <p class="project__info-item--label">Client</p>
+                <p class="project__info-item--value">Sancerra</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--label">Project</p>
+                <p class="project__info-item--value">Design & Website</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--detail">A website for a community builder that is pioneering creative solutions to the housing shortage in California</p>
+              </li>
+            </ul>
+            <%= link_to "Learn more", "https://sancerra.com", class: "btn btn--secondary project__btn" %>
           </div>
         </div>
       </div>

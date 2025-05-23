@@ -14,5 +14,7 @@
         "parser": "erb"
       }
     }
-  ]
+  ],
+  "cssDeclarationSorterOrder": "concentric-css",
+  "cssDeclarationSorterKeepOverrides": true
 }
