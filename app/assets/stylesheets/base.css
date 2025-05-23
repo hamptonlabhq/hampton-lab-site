@@ -21,17 +21,13 @@ main {
   align-self: center;
 }
 
-@media(max-width: 48em) {
+@media (max-width: 48em) {
   main {
     padding: 0px var(--space-xs) var(--space-xl) var(--space-xs);
   }
 }
 
-.text-center {
-  text-align: center;
-}
-
-
 section {
   margin: var(--space-xl) 0;
+  scroll-margin-top: calc(var(--nav-height) + var(--space-md));
 }
