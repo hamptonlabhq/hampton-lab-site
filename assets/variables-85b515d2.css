@@ -1,0 +1,120 @@
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-beige: #F7F6F2;
+  --color-black-100: #1d1d1f;
+  --color-black-200: #313131;
+  --color-blue-100: #7aaff0;
+  --color-blue-200: #409ceb;
+  --color-blue-300: #46bee2;
+  --color-blue-400: #282E37;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #ebebeb;
+
+  /* Colors: rgb */
+  --color-rgb-black-100: 29, 29, 31;
+
+  /* Font colors */
+  /* --color-text: var(--color-black-200); */
+  --color-text: #191a1b;
+  --color-link: var(--color-blue-200);
+
+  /* Font sizes */
+  --font-h1: 4rem;
+  --font-h1-mobile: 2.5rem;
+  --font-h2: 1.75rem;
+  --font-h3: 1.5rem;
+  --font-text: 1.05rem;
+
+  /* Spaces: for padding, margins, and gaps */
+  --space-xxs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1.5rem;
+  --space-md: 2.5rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
+  --space-xxl: 5rem;
+
+  /* Borders */
+  --border-color: var(--color-gray-200);
+  --border-width: 1px;
+  --border-radius-sm: 0.125rem;
+  --border-radius: 0.25rem;
+  --border-radius-lg: 2.25rem;
+
+  /* Transitions */
+  --transition-scale-up: 1.025;
+  --transition-speed: 150ms;
+  --transition-curve: ease-in;
+
+  /* Specifics */
+  --nav-height: 4.5em;
+}
+
+div {
+  font-size: var(--font-text);
+  color: var(--color-text);
+  font-weight: 300;
+  /* margin-block: 0.25rem; */
+  line-height: normal;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xxs) var(--space-md);
+  background-color: var(--color-blue-400);
+  font-size: var(--font-h4);
+  color: var(--color-white);
+  font-weight: 400;
+  line-height: 1;
+  border-radius: var(--border-radius-lg);
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: 0.2em;
+  transition: outline-color var(--transition-speed), outline-offset var(--transition-speed);
+
+}
+
+.btn:hover {
+  outline: 2px solid var(--color-black-100);
+  outline-offset: 0.05em;
+}
+
+.btn--secondary {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-blue-400);
+  color: var(--color-blue-400);
+  transition: background-color var(--transition-speed);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-blue-400);
+  color: var(--color-white);
+}
+
+.btn--outline {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-blue-400);
+  color: var(--color-blue-400);
+  transition: outline-color var(--transition-speed), outline-offset var(--transition-speed);
+}
+
+.btn--outline:hover {
+  outline: 2px solid var(--color-white);
+  outline-offset: 0.05em;
+}
+
+.btn--large {
+  margin-top: var(--space-md);
+  font-size: var(--font-h3);
+  padding: var(--space-xs) var(--space-md);
+}
+
+
+.color-blue {
+  /* color: #31859e; */
+  /* color: var(--color-blue-400); */
+  text-decoration: underline;
+}
