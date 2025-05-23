@@ -1,3 +1,4 @@
+/* Nav */
 .nav {
   position: fixed;
   display: flex;
@@ -9,14 +10,11 @@
   -ms-user-select: none;
   -webkit-user-select: none;
   width: 100%;
-  /* Will be determined by .nav__container */
   height: auto;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  /* Base z-index for the entire navbar component */
   z-index: 100;
   backdrop-filter: blur(0.75em);
   -webkit-backdrop-filter: blur(0.75em);
-  transition: background-color var(--transition-speed) var(--transition-curve), backdrop-filter var(--transition-speed) var(--transition-curve);
 }
 
 .nav.active {
@@ -31,26 +29,25 @@
   }
 
   .nav.active svg {
-    filter: invert(100%) sepia(24%) saturate(0%) hue-rotate(255deg) brightness(101%) contrast(104%);
+    filter: invert(100%) sepia(24%) saturate(0%)
+      hue-rotate(255deg) brightness(101%) contrast(104%);
   }
 }
 
+/* Nav container */
 .nav__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   min-height: var(--nav-height);
-  padding: 0 var(--space-medium);
+  padding: 0 var(--space-md);
   position: relative;
-  /* For z-index stacking context of children like toggle */
   z-index: 103;
-  /* Highest, so the bar is always on top */
   background-color: transparent;
-  /* So .nav's backdrop-filter or background shows through */
 }
 
-/* Left - logo */
+/* Left logo */
 .nav__logo {
   align-items: center;
   display: flex;
@@ -67,19 +64,15 @@
   transition: transform var(--transition-speed) var(--transition-curve);
 }
 
-/* Nav toggle (Burger Icon) */
+/* Right toggle (burger) */
 .nav__toggle {
   display: grid;
   font-size: var(--font-size-normal);
-  /* Affects em units for burger lines */
-  width: 1.5em;
-  /* Increased clickable area slightly */
-  height: 1.25em;
-  /* Increased clickable area slightly */
-  place-items: center;
+  width: 1.5rem;
+  height: 1.25rem;
   position: relative;
+  place-items: center;
   cursor: pointer;
-  /* z-index: 4; (Handled by nav__container's z-index) */
 }
 
 .nav__toggle::before,
@@ -87,32 +80,27 @@
   position: absolute;
   content: "";
   width: 1.25em;
-  height: .125em;
+  height: 0.125em;
   background: var(--color-text);
   transition: transform var(--transition-speed) var(--transition-curve);
   will-change: transform;
-  /* If the click is on .nav__toggle itself */
   pointer-events: none;
-  /* Ensure rotation is around the center of the bars */
   transform-origin: center;
 }
 
 /* Initial Burger state */
 .nav__toggle::before {
   transform: translateY(-0.25em);
-  /* Adjust for desired spacing */
 }
 
 .nav__toggle::after {
   transform: translateY(0.25em);
-  /* Adjust for desired spacing */
 }
 
 /* Active "X" state for Toggle */
 .nav__toggle.active::before {
   transform: translateY(0) rotate(45deg);
   background: var(--color-white);
-
 }
 
 .nav__toggle.active::after {
@@ -127,7 +115,6 @@
   inset: 0;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.25);
-  /* Ensure it's above page content but below the menu/navbar */
   z-index: 101;
 }
 
@@ -144,25 +131,21 @@
 /* Menu (Dropdown) */
 .nav__menu {
   position: absolute;
-  top: var(--space-small);
-  right: calc(var(--space-medium)/2);
+  top: var(--space-xs);
+  right: calc(var(--space-md) / 2);
   display: none;
   flex-direction: column;
   align-items: stretch;
   width: auto;
   max-width: 20rem;
   min-width: 20rem;
-  /* min-width: 220px; */
-  /* Give it a sensible minimum width */
-  gap: var(--space-small);
-  padding: var(--space-normal);
-  background-color: #272E38;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  background-color: #272e38;
   z-index: 102;
-  /* Above overlay (101), below nav-bar (103) */
   border-radius: var(--border-radius-lg);
   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
   overflow: hidden;
-  /* If using animations that might exceed bounds temporarily */
 }
 
 @media (max-width: 768px) {
@@ -177,21 +160,10 @@
 
 .nav__menu.active {
   display: flex;
-  /* Show when active */
-  /* Add animations for appearing/disappearing if desired, e.g., opacity or transform */
-  /* animation: fadeInMenu 0.3s var(--transition-curve) forwards; */
 }
-
-/* Optional: Fade-in animation for menu */
-/*
-@keyframes fadeInMenu {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-*/
 
 .nav__menu-container {
-  padding-inline: var(--space-small);
+  padding-inline: var(--space-xs);
   display: flex;
   align-items: start;
   flex-direction: column;
@@ -205,16 +177,15 @@
   font-size: 0.85em;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-
 }
 
 /* Links within the Menu */
 .nav__links {
   display: flex;
   flex-direction: column;
-  gap: var(--space-small);
-  margin-top: var(--space-medium);
-  padding-inline: var(--space-xs);
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+  padding-inline: var(--space-xxs);
 }
 
 .nav__link {
@@ -230,20 +201,5 @@
 
 .nav__link:hover,
 .nav__link:focus {
-  /* Added focus for accessibility */
   text-decoration: underline;
-  /* Remove default focus outline if you style focus differently */
 }
-
-/*
-  The media query that was previously hiding .nav__links at <48em has been removed.
-  If .nav__links are exclusively inside .nav__menu (which is the mobile dropdown),
-  they should always be visible when the menu itself is active.
-*/
-/*
-  @media (max-width: 48em) {
-  // .nav__links {
-  // display: none; // This rule was problematic if links are only in the toggled menu.
-  // }
-  }
-*/
