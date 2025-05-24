@@ -78,7 +78,7 @@
   font-size: var(--font-text);
   color: var(--color-text);
   font-weight: 300;
-  /* margin-block: 0.25rem; */
+  margin-block: 0.25rem;
   line-height: normal;
 }
 
@@ -90,7 +90,10 @@
   text-underline-offset: 0.06rem;
 }
 
-
 :where(.text-center) {
   text-align: center;
+}
+
+:where(strong) {
+  font-weight: 700;
 }

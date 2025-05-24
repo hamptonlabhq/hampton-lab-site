@@ -1,0 +1,19 @@
+.pricing__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  justify-content: center;
+  padding-top: var(--space-md);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .pricing__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pricing-card__list {
+  padding-left: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}

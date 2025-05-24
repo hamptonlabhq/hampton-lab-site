@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="n3aMquZBEq2DJr5ZmkmbRN_XVEVCdfenunYULl1sz01HeoBCOHAvimQouNIu8Rja5u5nbQVAtd327kmTj3DL9g" />
+<meta name="csrf-token" content="k7nhm3XvOuMVDUEJNcfwZoe53bo0q6XfknwXwLqSLmxLte1zq94HxPIDR4KBf3P4voDuknOe56Xe5Ep9aI4q1w" />
     
 
     
@@ -74,7 +74,7 @@
   </head>
 
   <body>
-    <!-- BEGIN app/views/process/index.html.erb --><!-- BEGIN app/views/header/_nav.html.erb --><nav class="nav" data-controller="nav">
+    <!-- BEGIN app/views/pricing/index.html.erb --><!-- BEGIN app/views/header/_nav.html.erb --><nav class="nav" data-controller="nav">
   <!-- Logo -->
   <div class="nav__container">
     <div class="nav__logo">
@@ -105,8 +105,8 @@
       </div>
       <div class="nav__links">
         <a class="nav__link" href="../index.html">Home</a>
-        <a class="nav__link" href="index.html">Process</a>
-        <a class="nav__link" href="../pricing/index.html">Pricing</a>
+        <a class="nav__link" href="../process/index.html">Process</a>
+        <a class="nav__link" href="index.html">Pricing</a>
         <a class="nav__link" href="../founder_letter/index.html">Founder letter</a>
       </div>
       
@@ -121,58 +121,56 @@
 <main class="bg-beige">
   <!-- Intro -->
   <section class="hero">
-    <h1 class="text-center">Welcome to <i>Hampton Lab</i>.</h1>
-    <p class="text-center">We believe that if we help enough people then we'll never have to worry about money.</p>
-    <a class="btn btn--large" href="index.html#process">Our process &#8595;</a>
+    <h1 class="text-center">Pick the package that <i>fits</i> you best.</h1>
+    <p class="text-center">If none of these packages work, reach out to see if we can help.</p>
+    <a class="btn btn--large" href="index.html#pricing">View services &#8595;</a>
   </section>
 
   <div class="hr"></div>
 
-  <!-- Testimonial -->
-  <!-- TODO -->
-
-  <!-- Process -->
-  <section id="process">
+  <!-- Pricing -->
+  <section id="pricing">
     <div class="section__title">
-      <p class="text-center">OUR PROCESS</p>
-      <h2 class="text-center">Let's walk through how this <i class="color-blue">usually</i> goes.</h2>
+      <p class="text-center">OUR PRICING</p>
+      <h2 class="text-center">We're simple. We only have <i>2 packages.</i></h2>
     </div>
 
-    <div class="process__wrapper">
+    <div class="pricing__wrapper">
+      <!-- Standard pricing -->
       <div class="process-card">
-        <p class="process-card__number">01.</p>
-        <h3 class="process-card__heading">Onboarding</h3>
-        <p class="process-card__sub-heading">30m.</p>
-        <p class="process-card__description">We start off with an onboarding call to see what your goals are for your new website and to see if we're the right fit. If we're not the right fit, we will point you in the right direction. If you need another meeting to hash things out, then we will be happy to do that.</p>
+        <h3 class="process-card__heading">Standard</h3>
+        <p class="process-card__sub-heading">$50/mo</p>
+        <ul class="pricing-card__list">
+          <li class="process-card__description"><strong>High end</strong> custom website design and development</li>
+          <li class="process-card__description">Fixed price no surprise charges</li>
+          <li class="process-card__description">Hosting for as long as the internet exists</li>
+          <li class="process-card__description"><strong>Custom logo</strong> if needed</li>
+          <li class="process-card__description"><strong>Free export</strong> an export</li>
+          <li class="process-card__description"><strong>20</strong> changes a month</li>
+          <p class="pricing-card__description"><i>*Domain name fee not covered (usually $1/mo)</i></p>
+        </ul>
+
+        <a class="btn btn--fit" href="mailto:waseem.mehany@hamptonlab.com?subject=Let&#39;s Talk About the Standard Package">Choose this package &#8594;</a>
       </div>
 
+      <!-- Lite -->
       <div class="process-card">
-        <p class="process-card__number">02.</p>
-        <h3 class="process-card__heading">Design</h3>
-        <p class="process-card__sub-heading">1 week.</p>
-        <p class="process-card__description">We will design your website from scratch, including any logos or figures that need to be refreshed, then we will deliver design files. Once you reach this stage, you have to commit for at least 6 months.</p>
-      </div>
+        <h3 class="process-card__heading">Lite</h3>
+        <p class="process-card__sub-heading">$25/mo</p>
+        <ul class="pricing-card__list">
+          <li class="process-card__description">Custom website design and development</li>
+          <li class="process-card__description">Fixed price no surprise charges</li>
+          <li class="process-card__description">Hosting for as long as the internet exists</li>
+          <li class="process-card__description">10 changes a month</li>
+          <p class="pricing-card__description"><i>*Domain name fee not covered (usually $1/mo)</i></p>
+        </ul>
 
-      <div class="process-card">
-        <p class="process-card__number">03.</p>
-        <h3 class="process-card__heading">Developement</h3>
-        <p class="process-card__sub-heading">1 week.</p>
-        <p class="process-card__description">We will develop your website from scratch to match the design spec. This is when your website comes to life. At the end of the week, we will share a staging website that is hidden from the public to get a confirmation.</p>
+        <a class="btn btn--fit" href="mailto:waseem.mehany@hamptonlab.com?subject=Let&#39;s Talk About the Lite Package">Choose this package &#8594;</a>
       </div>
-
-      <div class="process-card">
-        <p class="process-card__number">04.</p>
-        <h3 class="process-card__heading">Deployment</h3>
-        <p class="process-card__sub-heading">Instant.</p>
-        <p class="process-card__description">Once the website is confirmed, we will deploy your website for the whole world to see.</p>
-      </div>
-    </div>
-    <div class="process-card--cta">
-      <a class="btn btn--large" href="mailto:contact@hamptonlab.com">Reach out &#8594;</a>
     </div>
   </section>
 </main>
-<!-- END app/views/process/index.html.erb -->
+<!-- END app/views/pricing/index.html.erb -->
   </body>
 </html>
 <!-- END app/views/layouts/application.html.erb -->
