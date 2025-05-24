@@ -2,22 +2,32 @@
 <html>
   <head>
     <title><%= content_for(:title) || "Hampton Lab" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="title" content="Hampton Lab: Custom websites for the price of Squarespace" />
+    <meta name="description" content="We design, develop, and manage beautiful websites for $50/mo." />
 
     <%= yield :head %>
 
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
     <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
-    <link rel="icon" href="/logo-favicon-black.png" type="image/png" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="/logo-favicon-black.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="/logo-favicon-white.png" type="image/png" media="(prefers-color-scheme: dark)">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hamptonlab.com" />
+    <meta property="og:title" content="Hampton Lab: Custom websites for the price of Squarespace" />
+    <meta property="og:description" content="We design, develop, and manage beautiful websites for $50/mo." />
+    <meta property="og:image" content="<%= asset_url("thumbnail.svg") %>" />
+
+    <!-- Fav -->
+    <link rel="icon" href="/logo-favicon-black.png" type="image/png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="/logo-favicon-black.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="/logo-favicon-white.png" type="image/png" media="(prefers-color-scheme: dark)" />
     <!-- <link rel="icon" href="/logo-favicon-white.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)"> -->
-    <link rel="apple-touch-icon" href="/logo-favicon-black.png" media="(prefers-color-scheme: light)">
+    <link rel="apple-touch-icon" href="/logo-favicon-black.png" media="(prefers-color-scheme: light)" />
     <!-- <link rel="apple-touch-icon" href="/logo-favicon-black.png" media="(prefers-color-scheme: dark)"> -->
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
@@ -28,10 +38,12 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NQTZSWVBP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-5NQTZSWVBP');
+      gtag("config", "G-5NQTZSWVBP");
     </script>
   </head>
 
