@@ -23,7 +23,10 @@
         <%= link_to "Process", process_index_path, class: "nav__link" %>
         <%#= link_to "Blog", blogs_path, class: "nav__link" %>
       </div>
-      <%= link_to "Contact", contact_index_path, class: "btn btn--outline btn--large" %>
+      <%=
+        # link_to "Contact", contact_index_path, class: "btn btn--outline btn--large"
+      %>
+      <%= link_to "Email us &#8594;".html_safe, "mailto:contact@hamptonlab.com", class: "btn btn--outline btn--large" %>
     </div>
   </div>
 
