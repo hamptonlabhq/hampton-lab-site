@@ -1,7 +1,7 @@
 /* Wrapper: grid */
 .process__wrapper {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-sm);
   justify-content: center;
   padding-top: var(--space-md);
