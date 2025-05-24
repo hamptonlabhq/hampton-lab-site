@@ -30,9 +30,8 @@ export default class extends Controller {
    * Callback function for the Intersection Observer.
    * This function is executed when the observed element's visibility changes.
    * @param {Array<IntersectionObserverEntry>} entries - An array of IntersectionObserverEntry objects.
-   * @param {IntersectionObserver} observer - The Intersection Observer instance.
    */
-  handleIntersection(entries, observer) {
+  handleIntersection(entries) {
     entries.forEach(entry => {
       const body = document.body;
 

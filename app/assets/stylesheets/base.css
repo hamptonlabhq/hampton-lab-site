@@ -28,6 +28,7 @@ main {
 }
 
 section {
+  width: 100%;
   margin: var(--space-xl) 0;
   scroll-margin-top: calc(var(--nav-height) + var(--space-md));
 }
