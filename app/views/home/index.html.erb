@@ -3,7 +3,7 @@
   <section class="hero">
     <h1 class="text-center"><i>Custom websites</i> for the price of Squarespace</h1>
     <p class="text-center">We design, develop, and manage beautiful websites for $50/mo.</p>
-    <%= link_to "Explore", "#projects", class: "btn btn--large" %>
+    <%= link_to "Explore &#8595;".html_safe, "#projects", class: "btn btn--large" %>
   </section>
 
   <section data-controller="home" data-home-color-value="var(--color-beige)" data-home-default-color-value="var(--color-white)" id="projects">
@@ -131,5 +131,3 @@
     </div>
   </section>
 </main>
-
-<%= render "footer/nav" %>

@@ -6,6 +6,7 @@
         <%= render "header/logo" %>
       <% end %>
     </div>
+
     <!-- Toggle -->
     <div class="nav__toggle" data-action="click->nav#toggle"></div>
   </div>
@@ -15,13 +16,12 @@
     <div class="nav__menu-container">
       <div class="nav__title">
         <p>NAVIGATE</p>
-        <!-- Add icon -->
       </div>
       <div class="nav__links">
         <%= link_to "Home", root_path, class: "nav__link" %>
         <%= link_to "Founder letter", founder_letter_index_path, class: "nav__link" %>
+        <%= link_to "Process", process_index_path, class: "nav__link" %>
         <%#= link_to "Blog", blogs_path, class: "nav__link" %>
-        <%= link_to "About", about_index_path, class: "nav__link" %>
       </div>
       <%= link_to "Contact", contact_index_path, class: "btn btn--outline btn--large" %>
     </div>

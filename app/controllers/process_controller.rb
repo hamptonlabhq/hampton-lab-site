@@ -1,4 +1,4 @@
-class AboutController < ApplicationController
+class ProcessController < ApplicationController
   allow_unauthenticated_access
 
   def index
