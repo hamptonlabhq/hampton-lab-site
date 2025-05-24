@@ -29,8 +29,7 @@
   }
 
   .nav.active svg {
-    filter: invert(100%) sepia(24%) saturate(0%)
-      hue-rotate(255deg) brightness(101%) contrast(104%);
+    filter: invert(100%) sepia(24%) saturate(0%) hue-rotate(255deg) brightness(101%) contrast(104%);
   }
 }
 
@@ -41,7 +40,7 @@
   justify-content: space-between;
   width: 100%;
   min-height: var(--nav-height);
-  padding: 0 var(--space-md);
+  padding: 0 var(--space-lg);
   position: relative;
   z-index: 103;
   background-color: transparent;
@@ -79,7 +78,7 @@
 .nav__toggle::after {
   position: absolute;
   content: "";
-  width: 1.25em;
+  width: 1.45em;
   height: 0.125em;
   background: var(--color-text);
   transition: transform var(--transition-speed) var(--transition-curve);
@@ -90,14 +89,17 @@
 
 /* Initial Burger state */
 .nav__toggle::before {
-  transform: translateY(-0.25em);
+  transform: translateY(-0.275em);
 }
 
 .nav__toggle::after {
-  transform: translateY(0.25em);
+  transform: translateY(0.275em);
 }
 
 /* Active "X" state for Toggle */
+.nav__toggle.active {
+  margin-top: var(--space-xs);
+}
 .nav__toggle.active::before {
   transform: translateY(0) rotate(45deg);
   background: var(--color-white);
@@ -106,6 +108,12 @@
 .nav__toggle.active::after {
   transform: translateY(0) rotate(-45deg);
   background: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .nav__toggle.active {
+    margin-top: 0;
+  }
 }
 
 /* Page Overlay */
@@ -132,7 +140,7 @@
 .nav__menu {
   position: absolute;
   top: var(--space-xs);
-  right: calc(var(--space-md) / 2);
+  right: calc(var(--space-sm) / 2);
   display: none;
   flex-direction: column;
   align-items: stretch;
@@ -178,6 +186,11 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+@media (max-width: 768px) {
+  .nav__title {
+    padding-left: var(--space-xxs);
+  }
+}
 
 /* Links within the Menu */
 .nav__links {
@@ -193,9 +206,7 @@
   white-space: nowrap;
   color: white;
   text-decoration: none;
-
   font-size: var(--font-h3);
-
   line-height: 1;
 }
 
