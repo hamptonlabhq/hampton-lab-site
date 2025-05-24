@@ -97,6 +97,10 @@ div {
   padding: var(--space-xs) var(--space-md);
 }
 
+.btn--fit {
+  width: fit-content;
+}
+
 .color-blue {
   /* color: #31859e; */
   /* color: var(--color-blue-400); */
