@@ -26,6 +26,7 @@ cp CNAME 127.0.0.1:3000/
 # Copy thumbnail file to the mirrored directory
 echo "Copying thumbnail.svg file..."
 cp public/thumbnail.svg 127.0.0.1:3000/
+cp public/thumbnail.png 127.0.0.1:3000/
 
 
 # Kill the Rails server after wget is done
