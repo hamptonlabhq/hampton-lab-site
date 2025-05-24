@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="WVnkQxFsL_IlhL-yFmUe61sFuh0gJbmiUnlHwoWRRq7aghqzd5HhRmb4QpxA00Hxe9S7HImZFRAofdzMk5qWCQ" />
+<meta name="csrf-token" content="UwUpoAzzAj0cYPNIPjGmDYN7pG7tF4L_pPt3Y5OPNBUQr4u4LkVVseqIWRM9QULHvPOGhxLCJIIkmc1K3lN0RQ" />
     
 
     
@@ -21,10 +21,11 @@
 
     <link rel="stylesheet" href="../assets/actiontext-e646701d.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/application-8b441ae0.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="../assets/base-268c8685.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/base-723daabe.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/blogs-eba4ac3b.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/home-945effee.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/nav-2e8e7a96.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/process-61edd312.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/projects-94e9f82b.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/reset-007a8a8b.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="../assets/stacked-paper-5e4560a2.css" data-turbo-track="reload" />
@@ -40,7 +41,7 @@
     "@rails/actiontext": "/assets/actiontext.esm-f1c04d34.js",
     "controllers/application": "/assets/controllers/application-3affb389.js",
     "controllers/hello_controller": "/assets/controllers/hello_controller-708796bd.js",
-    "controllers/home_controller": "/assets/controllers/home_controller-004f47d6.js",
+    "controllers/home_controller": "/assets/controllers/home_controller-9a20b16d.js",
     "controllers": "/assets/controllers/index-ee64e1f1.js",
     "controllers/nav_controller": "/assets/controllers/nav_controller-72d1a8bf.js",
     "controllers/section_bg_controller": "/assets/controllers/section_bg_controller-031874eb.js"
@@ -54,7 +55,7 @@
 <link rel="modulepreload" href="../assets/actiontext.esm-f1c04d34.js">
 <link rel="modulepreload" href="../assets/controllers/application-3affb389.js">
 <link rel="modulepreload" href="../assets/controllers/hello_controller-708796bd.js">
-<link rel="modulepreload" href="../assets/controllers/home_controller-004f47d6.js">
+<link rel="modulepreload" href="../assets/controllers/home_controller-9a20b16d.js">
 <link rel="modulepreload" href="../assets/controllers/index-ee64e1f1.js">
 <link rel="modulepreload" href="../assets/controllers/nav_controller-72d1a8bf.js">
 <link rel="modulepreload" href="../assets/controllers/section_bg_controller-031874eb.js">
@@ -72,7 +73,7 @@
   </head>
 
   <body>
-    <!-- BEGIN app/views/about/index.html.erb --><!-- BEGIN app/views/header/_nav.html.erb --><nav class="nav" data-controller="nav">
+    <!-- BEGIN app/views/process/index.html.erb --><!-- BEGIN app/views/header/_nav.html.erb --><nav class="nav" data-controller="nav">
   <!-- Logo -->
   <div class="nav__container">
     <div class="nav__logo">
@@ -90,6 +91,7 @@
 </svg>
 <!-- END app/views/header/_logo.html.erb -->
 </a>    </div>
+
     <!-- Toggle -->
     <div class="nav__toggle" data-action="click->nav#toggle"></div>
   </div>
@@ -99,12 +101,11 @@
     <div class="nav__menu-container">
       <div class="nav__title">
         <p>NAVIGATE</p>
-        <!-- Add icon -->
       </div>
       <div class="nav__links">
         <a class="nav__link" href="../index.html">Home</a>
         <a class="nav__link" href="../founder_letter/index.html">Founder letter</a>
-        <a class="nav__link" href="index.html">About</a>
+        <a class="nav__link" href="index.html">Process</a>
       </div>
       <a class="btn btn--outline btn--large" href="../contact/index.html">Contact</a>
     </div>
@@ -117,26 +118,56 @@
 <main>
   <!-- Intro -->
   <section class="hero">
-    <h1 class="text-center">Welcome to <i class="color-blue">Hampton Lab</i>.</h1>
-    <!-- <p class="text-center">We create websites that just work.</p> -->
-    <!-- <a class="btn btn--large" href="">Explore</a> -->
+    <h1 class="text-center">Welcome to <i>Hampton Lab</i>.</h1>
+    <p class="text-center">We believe that if we help enough people then we'll never have to worry about money.</p>
+    <a class="btn btn--large" href="index.html#process">Our process &#8595;</a>
   </section>
 
-  <!-- <section>
+  <!-- Testimonial -->
+  <!-- TODO -->
+
+  <!-- Process -->
+  <section data-controller="home" data-home-color-value="var(--color-beige)" data-home-default-color-value="var(--color-white)" id="process">
     <div class="section__title">
-      <p class="text-center">HOW WE OPERATE.</p>
-      <h2 class="text-center">This is <i class="color-blue">usually</i> the timeline.</h2>
+      <p class="text-center">OUR PROCESS</p>
+      <h2 class="text-center">Let's walk through how this <i class="color-blue">usually</i> goes.</h2>
     </div>
 
-    <div class="process__cards">
-      <h3>1. Onboarding call (30 mins)</h3>
-      <h3>2. First design (1 week)</h3>
-      <h3>3. Website developement (2 weeks)</h3>
-      <h3>4. Deploy</h3>
+    <div class="process__wrapper">
+      <div class="process-card">
+        <p class="process-card__number">01.</p>
+        <h3 class="process-card__heading">Onboarding</h3>
+        <p class="process-card__sub-heading">30m.</p>
+        <p class="process-card__description">We start off with an onboarding call to see what your goals are for your new website and to see if we're the right fit. If we're not the right fit, we will point you in the right direction. If you need another meeting to hash things out, then we will be happy to do that.</p>
+      </div>
+
+      <div class="process-card">
+        <p class="process-card__number">02.</p>
+        <h3 class="process-card__heading">Design</h3>
+        <p class="process-card__sub-heading">1 week.</p>
+        <p class="process-card__description">We will design your website from scratch, including any logos or figures that need to be refreshed, then we will deliver design files. Once you reach this stage, you have to commit for at least 6 months.</p>
+      </div>
+
+      <div class="process-card">
+        <p class="process-card__number">03.</p>
+        <h3 class="process-card__heading">Developement</h3>
+        <p class="process-card__sub-heading">1 week.</p>
+        <p class="process-card__description">We will develop your website from scratch to match the design spec. This is when your website comes to life. At the end of the week, we will share a staging website that is hidden from the public to get a confirmation.</p>
+      </div>
+
+      <div class="process-card">
+        <p class="process-card__number">04.</p>
+        <h3 class="process-card__heading">Deployment</h3>
+        <p class="process-card__sub-heading">Instant.</p>
+        <p class="process-card__description">Once the website is confirmed, we will deploy your website for the whole world to see.</p>
+      </div>
     </div>
-  </section> -->
+    <div class="process-card--cta">
+      <a class="btn btn--large" href="../contact/index.html">Reach out &#8594;</a>
+    </div>
+  </section>
 </main>
-<!-- END app/views/about/index.html.erb -->
+<!-- END app/views/process/index.html.erb -->
   </body>
 </html>
 <!-- END app/views/layouts/application.html.erb -->
