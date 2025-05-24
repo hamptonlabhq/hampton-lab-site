@@ -7,6 +7,9 @@ body {
   padding: calc(var(--nav-height) + var(--space-sm)) 0px;
   transition: background-color var(--transition-speed) var(--transition-curve);
 }
+body:has(main.bg-beige) {
+  background-color: var(--color-beige);
+}
 
 main {
   display: flex;
@@ -98,4 +101,16 @@ div {
   /* color: #31859e; */
   /* color: var(--color-blue-400); */
   text-decoration: underline;
+}
+
+.hr {
+  width: 50%;
+  margin: 0 auto;
+  height: 1px;
+  background-color: var(--color-blue-400);
+}
+@media (max-width: 48em) {
+  .hr {
+    width: 80%;
+  }
 }
