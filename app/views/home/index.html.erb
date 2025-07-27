@@ -3,16 +3,55 @@
   <section class="hero">
     <!-- <h1 class="text-center"><i>Custom websites</i> for the price of Squarespace</h1> -->
     <h1 class="text-center">We <i>manage</i> your website so you can <i>manage</i> your business.</h1>
-    <p class="text-center">
+    <!-- <p class="text-center">
       We design, develop, and manage beautiful websites for $25/mo.
       <br />
       All website revisions are done in under a week.
+    </p> -->
+    <p class="text-center">
+      We design, develop, and manage beautiful websites.
+      <!-- <br /> -->
+      <!-- All website revisions are done in under a week. -->
     </p>
     <%= link_to "Explore &#8595;".html_safe, "#projects", class: "btn btn--large" %>
   </section>
 
   <section data-controller="home" data-home-color-value="var(--color-beige)" data-home-default-color-value="var(--color-white)" id="projects">
     <div class="projects__container">
+      <!-- Rockwood Construction -->
+      <div class="project__card">
+        <div class="project__grid">
+          <!-- Project img -->
+          <div class="project__img">
+            <%= image_tag("rockwood-construction.jpg") %>
+          </div>
+          <!-- Project content -->
+          <div class="project__content">
+            <div class="project__header">
+              <h2 class="project__title">
+                Rockwood Construction
+                <br>
+                <i>(In Progress)</i>
+              </h2>
+              <%= link_to "Visit website &#8594;".html_safe, "https://rockwood-452a10.webflow.io/", class: "project__link", target: :_blank %>
+            </div>
+            <ul class="project__info">
+              <li class="project__info-item">
+                <p class="project__info-item--label">Client</p>
+                <p class="project__info-item--value">Rockwood Construction</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--label">Project</p>
+                <p class="project__info-item--value">Branding & Website</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--detail">A boutique general contractor specializing in multifamily construction in California and Nevada.</p>
+              </li>
+            </ul>
+            <%= link_to "Visit website", "https://rockwood-452a10.webflow.io/", class: "btn btn--secondary project__btn", target: :_blank %>
+          </div>
+        </div>
+      </div>
       <!-- LA Years -->
       <div class="project__card">
         <div class="project__grid">
@@ -33,13 +72,13 @@
               </li>
               <li class="project__info-item">
                 <p class="project__info-item--label">Project</p>
-                <p class="project__info-item--value">Website</p>
+                <p class="project__info-item--value">Branding & Website</p>
               </li>
               <li class="project__info-item">
                 <p class="project__info-item--detail">A history website for a prominent Christian author and teacher in the 20th century.</p>
               </li>
             </ul>
-            <%= link_to "Learn more", "https://www.layears.org", class: "btn btn--secondary project__btn", target: :_blank %>
+            <%= link_to "Visit website", "https://www.layears.org", class: "btn btn--secondary project__btn", target: :_blank %>
           </div>
         </div>
       </div>
@@ -63,13 +102,43 @@
               </li>
               <li class="project__info-item">
                 <p class="project__info-item--label">Project</p>
-                <p class="project__info-item--value">Design & Website</p>
+                <p class="project__info-item--value">Branding & Website</p>
               </li>
               <li class="project__info-item">
                 <p class="project__info-item--detail">A website for a community builder that is pioneering creative solutions to the housing shortage in California</p>
               </li>
             </ul>
-            <%= link_to "Learn more", "https://sancerra.com", class: "btn btn--secondary project__btn", target: :_blank %>
+            <%= link_to "Visit website", "https://sancerra.com", class: "btn btn--secondary project__btn", target: :_blank %>
+          </div>
+        </div>
+      </div>
+      <!-- Cornerstone Real Estate -->
+      <div class="project__card">
+        <div class="project__grid">
+          <!-- Project img -->
+          <div class="project__img">
+            <%= image_tag("cornerstone-real-estate.jpg") %>
+          </div>
+          <!-- Project content -->
+          <div class="project__content">
+            <div class="project__header">
+              <h2 class="project__title">Cornerstone Real Estate</h2>
+              <%= link_to "Visit website &#8594;".html_safe, "https://dstproperties1031.com/", class: "project__link", target: :_blank %>
+            </div>
+            <ul class="project__info">
+              <li class="project__info-item">
+                <p class="project__info-item--label">Client</p>
+                <p class="project__info-item--value">Cornerstone Real Estate</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--label">Project</p>
+                <p class="project__info-item--value">Branding</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--detail">A real estate investing company focused on Delaware Statutory Trust (DST) investments and 1031 exchanges.</p>
+              </li>
+            </ul>
+            <%= link_to "Visit website", "https://dstproperties1031.com/", class: "btn btn--secondary project__btn", target: :_blank %>
           </div>
         </div>
       </div>
@@ -93,13 +162,43 @@
               </li>
               <li class="project__info-item">
                 <p class="project__info-item--label">Project</p>
+                <p class="project__info-item--value">Branding & Website</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--detail">A website focused on creating a community surrounded around basic Christian truths.</p>
+              </li>
+            </ul>
+            <%= link_to "Visit website", "https://uponthefoundation.com", class: "btn btn--secondary project__btn", target: :_blank %>
+          </div>
+        </div>
+      </div>
+      <!-- Tim Chiu -->
+      <div class="project__card">
+        <div class="project__grid">
+          <!-- Project img -->
+          <div class="project__img">
+            <%= image_tag("dr-tim-chiu.jpg") %>
+          </div>
+          <!-- Project content -->
+          <div class="project__content">
+            <div class="project__header">
+              <h2 class="project__title">Dr. Tim Chiu</h2>
+              <%= link_to "Visit website &#8594;".html_safe, "https://drtimothychiu.com/", class: "project__link", target: :_blank %>
+            </div>
+            <ul class="project__info">
+              <li class="project__info-item">
+                <p class="project__info-item--label">Client</p>
+                <p class="project__info-item--value">Irvine Center of Integrative Medicine and Wellness</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--label">Project</p>
                 <p class="project__info-item--value">Website</p>
               </li>
               <li class="project__info-item">
-                <p class="project__info-item--detail">A website focused on basic Christian truths.</p>
+                <p class="project__info-item--detail">A chiropractic business located in southern California.</p>
               </li>
             </ul>
-            <%= link_to "Learn more", "https://uponthefoundation.com", class: "btn btn--secondary project__btn", target: :_blank %>
+            <%= link_to "Visit website", "https://drtimothychiu.com/", class: "btn btn--secondary project__btn", target: :_blank %>
           </div>
         </div>
       </div>
@@ -123,13 +222,13 @@
               </li>
               <li class="project__info-item">
                 <p class="project__info-item--label">Project</p>
-                <p class="project__info-item--value">Website & Brand</p>
+                <p class="project__info-item--value">Branding & Website</p>
               </li>
               <li class="project__info-item">
                 <p class="project__info-item--detail">A travel business for focused on church history trips in Europe.</p>
               </li>
             </ul>
-            <%= link_to "Learn more", "https://europetreks.com", class: "btn btn--secondary project__btn", target: :_blank %>
+            <%= link_to "Visit website", "https://europetreks.com", class: "btn btn--secondary project__btn", target: :_blank %>
           </div>
         </div>
       </div>
