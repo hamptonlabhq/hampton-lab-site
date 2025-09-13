@@ -1,26 +1,32 @@
 <%= render "header/nav" %>
-<main>
+<main class="bg-beige">
   <p style="color: green"><%= notice %></p>
+
+  <!-- Intro -->
+  <section class="hero">
+    <h1 class="text-center">A collection of written thoughts.</h1>
+  </section>
 
   <% content_for :title, "Blogs" %>
 
-  <h1 class="text-center">The vent.</h1>
+  <!-- Blog -->
+  <section class="blog__section">
+    <div id="blogs" class="blog__feed">
+      <% @blogs.each do |blog| %>
+        <div class="blog__card">
+          <h3 class="blog__title">
+            <%= blog.title %>
+          </h3>
+          <p class="blog__content">
+            <%= truncate(blog.content.to_plain_text, length: 500) %>
+          </p>
+          <p>
+            <%= link_to "Read more", blog, class: "blog__show" %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </section>
 
-  <div id="blogs" class="blog__feed">
-    <% @blogs.each do |blog| %>
-      <div class="blog__card">
-        <h2 class="blog__title">
-          <%= blog.title %>
-        </h2>
-        <p class="blog__content">
-          <%= truncate(blog.content.to_plain_text, length: 500) %>
-        </p>
-        <p>
-          <%= link_to "Read more", blog, class: "blog__show" %>
-        </p>
-      </div>
-    <% end %>
-  </div>
-
-  <%= link_to "New blog", new_blog_path if authenticated?%>
+  <%= link_to "New blog", new_blog_path if authenticated? %>
 </main>
