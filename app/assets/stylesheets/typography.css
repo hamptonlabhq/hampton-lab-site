@@ -38,7 +38,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-:is(p, a, li) {
+:is(h4, p, a, li) {
   font-family: "Basis-Grotesque-Pro", system-ui, -apple-system;
   font-feature-settings: "liga", "ss05";
   -webkit-font-smoothing: antialiased;
@@ -71,6 +71,13 @@
   font-size: var(--font-h3);
   color: var(--color-text);
   font-weight: 400;
+  line-height: 1;
+}
+
+:is(h4) {
+  font-size: var(--font-h2);
+  color: var(--color-text);
+  font-weight: 600;
   line-height: 1;
 }
 

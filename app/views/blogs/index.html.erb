@@ -1,32 +1,32 @@
 <%= render "header/nav" %>
+
+<% if authenticated? %>
+  <section>
+    Logged in.
+  </section>
+<% end %>
+
 <main class="bg-beige">
   <p style="color: green"><%= notice %></p>
 
-  <!-- Intro -->
+  <!-- Hero -->
   <section class="hero">
-    <h1 class="text-center">A collection of written thoughts.</h1>
+    <h1 class="text-center">The journey of creating a business that actually works.</h1>
   </section>
+  <div class="hr"></div>
 
-  <% content_for :title, "Blogs" %>
-
-  <!-- Blog -->
+  <!-- Blogs -->
   <section class="blog__section">
     <div id="blogs" class="blog__feed">
       <% @blogs.each do |blog| %>
         <div class="blog__card">
-          <h3 class="blog__title">
-            <%= blog.title %>
-          </h3>
-          <p class="blog__content">
-            <%= truncate(blog.content.to_plain_text, length: 500) %>
-          </p>
-          <p>
-            <%= link_to "Read more", blog, class: "blog__show" %>
-          </p>
+            <%= content_tag(:h4, blog.title, class: "blog__title") %>
+            <%= content_tag(:p, truncate(blog.content.to_plain_text, length: 250), class: "blog__content") %>
+            <%= link_to "Read blog", blog, class: "btn blog__show" %>
         </div>
       <% end %>
     </div>
   </section>
 
-  <%= link_to "New blog", new_blog_path if authenticated? %>
+  <%= link_to "New blog", new_blog_path, class: "button" if authenticated? %>
 </main>
