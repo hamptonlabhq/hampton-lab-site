@@ -24,7 +24,8 @@
   --font-h1-mobile: 2.5rem;
   --font-h2: 1.75rem;
   --font-h3: 1.5rem;
-  --font-text: 1.05rem;
+  /*--font-text: 1.05rem;*/
+  --font-text: 1.35rem;
 
   /* Spaces: for padding, margins, and gaps */
   --space-xxs: 0.5rem;
