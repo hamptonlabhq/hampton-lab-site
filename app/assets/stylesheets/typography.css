@@ -23,6 +23,13 @@
 
 @font-face {
   font-family: "Basis-Grotesque-Pro";
+  src: url("Basis-Grotesque-Pro-Regular-Italic.otf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Basis-Grotesque-Pro";
   src: url("Basis-Grotesque-Pro-Bold.otf");
   font-weight: 700;
   font-style: bold;
@@ -38,7 +45,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-:is(h4, p, a, li) {
+:is(h4, p, a, li, div) {
   font-family: "Basis-Grotesque-Pro", system-ui, -apple-system;
   font-feature-settings: "liga", "ss05";
   -webkit-font-smoothing: antialiased;
@@ -91,7 +98,13 @@
 
 :is(a) {
   font-size: var(--font-text);
-  /* color: var(--color-link); */
+  color: var(--color-text-gray);
+  font-weight: 300;
+  text-underline-offset: 0.06rem;
+}
+
+:is(small) {
+  font-size: var(--font-small);
   color: var(--color-text);
   font-weight: 300;
   text-underline-offset: 0.06rem;

@@ -2,7 +2,14 @@
   <h1 class="blog__title">
     <%= blog.title %>
   </h1>
-  <p class="blog__content">
-    <%= blog.content %>
-  </p>
+
+  <div>
+    <%= image_tag(blog.cover_image, class: "blog_cover") %>
+  </div>
+
+  <article>
+    <p class="blog__content">
+      <%= blog.content %>
+    </p>
+  </article>
 </div>
