@@ -4,7 +4,7 @@
   </h1>
 
   <div>
-    <%= image_tag(blog.cover_image, class: "blog_cover") %>
+    <%= image_tag(blog.cover_image, class: "blog_cover") if blog.cover_image.attached? %>
   </div>
 
   <article>
