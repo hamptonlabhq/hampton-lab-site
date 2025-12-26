@@ -68,10 +68,26 @@
 
 .blog__title {
   align-self: center;
+  margin: var(--space-xl);
 }
 
-/* Code blocks for  */
+.blog__content {
+  margin-top: var(--space-xl);
+  /*line-height: 1.4;*/
+}
+
+/* Code blocks for blog */
 .blog__post pre {
   overflow-x: auto;
   white-space: pre-wrap;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  padding: var(--space-sm);
+}
+
+.blog__controls {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0 var(--space-xs) 0;
 }

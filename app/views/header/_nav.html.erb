@@ -7,6 +7,11 @@
       <% end %>
     </div>
 
+    <!-- Logout button (if logged in) -->
+    <% if authenticated? %>
+      <%= button_to "Logout", session_path, method: :delete, class: "btn" %>
+    <% end %>
+
     <!-- Toggle -->
     <div class="nav__toggle" data-action="click->nav#toggle"></div>
   </div>

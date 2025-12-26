@@ -4,6 +4,7 @@
   --color-beige: #f7f6f2;
   --color-black-100: #1d1d1f;
   --color-black-200: #313131;
+  --color-black-300: #838383;
   --color-blue-100: #7aaff0;
   --color-blue-200: #409ceb;
   --color-blue-300: #46bee2;
@@ -18,6 +19,7 @@
   /* --color-text: var(--color-black-200); */
   --color-text: #191a1b;
   --color-link: var(--color-blue-200);
+  --color-text-gray: var(--color-black-300);
 
   /* Font sizes */
   --font-h1: 4rem;
@@ -26,6 +28,10 @@
   --font-h3: 1.5rem;
   /*--font-text: 1.05rem;*/
   --font-text: 1.35rem;
+  --font-small: 1rem;
+
+  /* Font family */
+  --font-family-system: -apple-system, BlinkMacSystemFont, Aptos, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
   /* Spaces: for padding, margins, and gaps */
   --space-xxs: 0.5rem;
