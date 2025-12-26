@@ -80,9 +80,10 @@
 .blog__post pre {
   overflow-x: auto;
   white-space: pre-wrap;
-  margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
   background-color: #ffffff;
   padding: var(--space-sm);
+  /*margin-inline: var(--space-xs);*/
 }
 
 .blog__controls {

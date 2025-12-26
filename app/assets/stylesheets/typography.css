@@ -98,7 +98,7 @@
 
 :is(a) {
   font-size: var(--font-text);
-  color: var(--color-text-gray);
+  color: var(--color-link);
   font-weight: 300;
   text-underline-offset: 0.06rem;
 }
