@@ -14,9 +14,10 @@
     <div id="blogs" class="blog__feed">
       <% @blogs.each do |blog| %>
         <div class="blog__card">
+          <%= image_tag(blog.cover_image, class: "blog__cover") if blog.cover_image.attached? %>
           <%= content_tag(:small, blog.created_at.strftime("%b %d, %Y"), class: "blog__date") %>
-          <%= content_tag(:h4, blog.title, class: "blog__title") %>
-          <%= content_tag(:p, truncate(blog.content.to_plain_text, length: 250), class: "blog__content") %>
+          <%= content_tag(:h4, blog.title) %>
+          <%= content_tag(:p, truncate(blog.content.to_plain_text, length: 250), class: "") %>
           <%#= content_tag(:p, blog.content, class: "blog__content") %>
           <%= link_to "Read blog", blog, class: "btn blog__show" %>
         </div>
