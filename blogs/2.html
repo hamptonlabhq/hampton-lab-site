@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="W9jcDqOvEGX2E5A98dtzje7NbrekpXg05XiN-FlEqwdVoLpkX0ofc8cLl9Vf9cMI6gFGZ_w3D9pfnoR2VWQMqQ" />
+<meta name="csrf-token" content="3TFWTia7W3oL_TvZTnRHMbofGO1p4OVDVxGA0F0n4hjTSTAk2l5UbDrlPDHgWve0vtMwPTFykq3t94leUQdFtg" />
     
     <meta name="title" content="Hampton Lab: A Website Design and Mangement Company.">
     <meta name="description" content="We design, develop, and manage beautiful websites for $50/mo.">
@@ -85,7 +85,7 @@
   </head>
 
   <body>
-    <!-- BEGIN app/views/founder_letter/index.html.erb
+    <!-- BEGIN app/views/blogs/show.html.erb
 --><!-- BEGIN app/views/header/_nav.html.erb
 --><nav class="nav" data-controller="nav">
   <!-- Logo -->
@@ -133,7 +133,7 @@
       <div class="nav__links">
         <a class="nav__link" href="../index.html">Home</a>
         <a class="nav__link" href="../process/index.html">Process</a>
-        <a class="nav__link" href="index.html">Founder letter</a>
+        <a class="nav__link" href="../founder_letter/index.html">Founder letter</a>
         <a class="nav__link" href="../blogs.html">Blog</a>
       </div>
       
@@ -146,61 +146,66 @@
 <!-- END app/views/header/_nav.html.erb -->
 
 <main class="bg-beige">
-  <!-- Hero -->
-  <section class="hero">
-    <h1 class="text-center">A company <i>forged</i> out of frustration.</h1>
-  </section>
+  <p style="color: green"></p>
 
-  <div class="hr"></div>
+  <!-- BEGIN app/views/blogs/_blog.html.erb
+--><div id="blog_2" class="blog__post">
+  <h1 class="blog__title">
+    Yabai Tiling Manager
+  </h1>
 
-  <!-- Stacked paper effect -->
-  <section class="letters">
-    <div class="letter__container">
-      <div class="letters__main">
-        <div class="letters__paragraph">
-          <h3>
-            You need a website. The agencies want to sell you everything else.
-            <br>
-            I tried hiring one last year. Twelve-page proposals. Strategy sessions. Brand audits. Social media packages. All I wanted was a clean site that worked.
-          </h3>
-        </div>
-        <div class="letters__paragraph">
-          <h3>
-            The DIY route isn't better.
-            <br>
-            WordPress, Squarespace, Wix—each promises simplicity. Each delivers complexity. You spend weekends wrestling with plugins instead of running your business. Your site ends up looking like everyone else's. Generic templates. No character.
-          </h3>
-        </div>
-        <div class="letters__paragraph">
-          <h3>
-            Here's what I learned:
-            <br>
-            Good websites need good people, not fancy platforms. Not AI. Not offshore teams working for pennies.
-          </h3>
-        </div>
-        <div class="letters__paragraph">
-          <h3>You wouldn't fix your own plumbing. You wouldn't perform your own surgery. Why build your own website?</h3>
-        </div>
-        <div class="letters__paragraph">
-          <h3>
-            So I started <strong>Hampton Lab</strong>.
-            <br>
-            We build websites. Nothing more, nothing less. You'll know the price upfront. You'll know when it's done. You'll know exactly what you're getting.
-            <br>
-            We work with people who value craft over complications. If that's you, let's talk.
-          </h3>
-        </div>
-        <div class="letters__paragraph">
-          <img src="../assets/signature-96ef6d2f.jpg" />
-          <h3><strong>Waseem Mehany</strong></h3>
-          <h3>Founder, Hampton Lab.</h3>
-          <a href="mailto:waseem.mehany@hamptonlab.com"><h3>waseem.mehany@hamptonlab.com</h3></a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div>
+    <img class="blog_cover" src="../rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--bab9a63d75ed7f228860965ee13eaa566c6f5cca/window-tiling-manager.png" />
+  </div>
+
+  <article>
+    <p class="blog__content">
+      <!-- BEGIN app/views/layouts/action_text/contents/_content.html.erb
+--><div class="trix-content">
+  <!-- BEGIN /Users/waseem/.local/share/mise/installs/ruby/3.4.6/lib/ruby/gems/3.4.0/gems/actiontext-8.1.1/app/views/action_text/contents/_content.html.erb
+--><div>If you're trying to remove animations between Desktops (workspaces) in mac, keep reading.<br><em>Note: This guide is only for newer MacBooks (Apple Silicon macOS 13.x.x).<br><br></em>One of the best productivity boosts that I got was when I learned to rely on my keyboard more. It is a freedom untold to ditch the mouse. The underrated skill of maneuvering your machine with just your keyboard is beyond valuable to me. One of the best things you can do to rely more on your keyboard is to install a window tiling manager—like <a href="https://github.com/koekeishiya/yabai">yabai</a>.<br> <br>In this guide, I will walk you through how I set up yabai for my machine.<br><br><strong>1. Installation</strong></div><pre>brew install yabai</pre><div>Installing packages with homebrew is probably the easiest.<br><br><strong>2. Create config file</strong></div><pre>cd ~/.config/
+mkdir yabai
+cd yabai
+touch yabairc
+chmod +x yabairc</pre><div><br>For a basic yabairc file, add this in the yabairc:</div><pre># ~/.config/yabai/yabairc
+
+# Load scripting automatically
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# Remove animations
+yabai -m config window_animation_duration 0.0</pre><div>There is so much more than you can do. I highly recommend you look through their <a href="https://github.com/koekeishiya/yabai/wiki">wiki</a>.<br><br><strong>3. Partially disable csrutil</strong></div><div><strong><em>A. Enter recovery mode.<br></em></strong>Shut down your Mac. Press and hold the Power button until “Loading startup options” appears. Click Options → Continue.<br>Then in the top bar, click Utilities → Terminal<br><br><strong><em>B. Disable fs, debugging, and nvram.<br></em></strong>Enter this on your terminal:</div><pre>csrutil enable --without fs --without debug --without nvram</pre><div>Restart mac after this.<br><br><strong><em>C. Enable non-Apple-signed arm64e binaries<br></em></strong>Open a new terminal and run this:</div><pre>sudo nvram boot-args=-arm64e_preview_abi</pre><div>Then restart again.<br><br><strong><em>D. Verify csrutil<br></em></strong>You can verify that System Integrity Protection is turned off by opening a new terminal and running:</div><pre>csrutil status</pre><div>It should return something like this:</div><pre>System Integrity Protection status: unknown (Custom Configuration).
+
+Configuration:
+	Apple Internal: disabled
+	Kext Signing: enabled
+	Filesystem Protections: disabled
+	Debugging Restrictions: disabled
+	DTrace Restrictions: enabled
+	NVRAM Protections: disabled
+	BaseSystem Verification: enabled
+	Boot-arg Restrictions: disabled
+	Kernel Integrity Protections: enabled
+	Authenticated Root Requirement: enabled
+
+This is an unsupported configuration, likely to break in the future and leave your machine in an unknown state.</pre><div>Great! Now you're ready to enable yabai.<br><br><strong>4. Start the yabai services<br></strong>Run this in your terminal:</div><pre>yabai --start-service
+sudo yabai --load-sa</pre><div>It'll ask you if yabai can control your control, follow the commands on the screen to enable this.<br>It should be under System Preferences → Security &amp; Privacy → Accessibility → yabai<br><br>Great. Now use your shortcuts to switch between Desktops (workspaces) and you should have no sliding animations.</div>
+<!-- END /Users/waseem/.local/share/mise/installs/ruby/3.4.6/lib/ruby/gems/3.4.0/gems/actiontext-8.1.1/app/views/action_text/contents/_content.html.erb --></div>
+<!-- END app/views/layouts/action_text/contents/_content.html.erb -->
+    </p>
+  </article>
+</div>
+<!-- END app/views/blogs/_blog.html.erb -->
+
+  <div class="blog__controls">
+    
+    <a class="btn btn--secondary" href="../blogs.html">Back to blogs</a>
+  </div>
+  <div class="blog__controls">
+    
+  </div>
 </main>
-<!-- END app/views/founder_letter/index.html.erb -->
+<!-- END app/views/blogs/show.html.erb -->
   </body>
 </html>
 <!-- END app/views/layouts/application.html.erb -->
