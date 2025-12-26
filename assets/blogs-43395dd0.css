@@ -68,7 +68,7 @@
 
 .blog__title {
   align-self: center;
-  margin: var(--space-xl);
+  margin: var(--space-xl) 0;
 }
 
 .blog__content {
