@@ -30,9 +30,14 @@
     <link rel="apple-touch-icon" href="/logo-favicon-black.png" media="(prefers-color-scheme: light)">
     <!-- <link rel="apple-touch-icon" href="/logo-favicon-black.png" media="(prefers-color-scheme: dark)"> -->
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%# Fonts used above the fold on every page; fetch them in parallel with the CSS. %>
+    <link rel="preload" href="<%= asset_path("PPEiko-Medium.woff2") %>" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="<%= asset_path("Basis-Grotesque-Pro-Regular.woff2") %>" as="font" type="font/woff2" crossorigin>
+
+    <%# All stylesheet files in app/assets/stylesheets (actiontext.css only on blog pages) %>
+    <%= stylesheet_link_tag *page_stylesheets, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_import_module_tag "rich_text" if rich_text_page? %>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFDRL0V51F"></script>

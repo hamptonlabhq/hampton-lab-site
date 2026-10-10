@@ -36,3 +36,6 @@
 
 # Mac specific files
 .DS_Store
+
+# Static build output (deploy_github.sh)
+/dist
