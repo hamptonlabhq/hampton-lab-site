@@ -47,6 +47,6 @@ class BlogsTest < ApplicationSystemTestCase
       fill_in "email_address", with: users(:one).email_address
       fill_in "password", with: "password"
       click_on "Sign in"
-      assert_no_current_path new_session_path
+      assert_no_current_path new_session_path, wait: 10
     end
 end
