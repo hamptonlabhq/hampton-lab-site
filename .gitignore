@@ -45,3 +45,6 @@
 
 # wget mirror output from deploy_github.sh
 /127.0.0.1:3000/
+
+# Claude Code agent worktrees
+/.claude/worktrees/
