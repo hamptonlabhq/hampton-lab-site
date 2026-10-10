@@ -20,7 +20,8 @@ PID_FILE="tmp/pids/static_build.pid"
 
 # Files in public/ that wget can't discover by following links (all optional).
 # No CNAME: that file is for GitHub Pages; Cloudflare Pages sets the domain itself.
-EXTRAS=(public/thumbnail.png public/robots.txt public/sitemap.xml public/_headers)
+# 404.html: without it Cloudflare Pages serves index.html with a 200 for every unknown URL.
+EXTRAS=(public/thumbnail.png public/robots.txt public/sitemap.xml public/_headers public/404.html)
 
 RAILS_PID=""
 cleanup() {
