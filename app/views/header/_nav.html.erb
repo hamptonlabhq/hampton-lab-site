@@ -13,11 +13,11 @@
     <% end %>
 
     <!-- Toggle -->
-    <div class="nav__toggle" data-action="click->nav#toggle"></div>
+    <button type="button" class="nav__toggle" data-action="click->nav#toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"></button>
   </div>
 
   <!-- Menu -->
-  <div class="nav__menu" data-nav-target="menu">
+  <div class="nav__menu" id="nav-menu" data-nav-target="menu">
     <div class="nav__menu-container">
       <div class="nav__title">
         <p>NAVIGATE</p>
