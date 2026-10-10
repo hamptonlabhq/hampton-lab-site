@@ -43,8 +43,8 @@
 # Node packages (dev-only Prettier tooling; restore with `npm install`)
 /node_modules/
 
-# wget mirror output from deploy_github.sh
-/127.0.0.1:3000/
-
 # Claude Code agent worktrees
 /.claude/worktrees/
+
+# Static build output (deploy_github.sh)
+/dist
