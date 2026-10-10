@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= content_for(:title) || "Hampton Lab" %></title>
+    <meta charset="utf-8">
+    <title><%= page_title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <meta name="title" content="Hampton Lab: A Website Design and Mangement Company.">
-    <meta name="description" content="We design, develop, and manage beautiful websites for $50/mo.">
+    <meta name="description" content="<%= page_description %>">
+    <% if @noindex %>
+    <meta name="robots" content="noindex, nofollow">
+    <% else %>
+    <link rel="canonical" href="<%= canonical_url %>">
+    <% end %>
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
     <%= yield :head %>
 
@@ -17,10 +23,26 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hamptonlab.com">
-    <meta property="og:title" content="Hampton Lab: A Website Design and Mangement Company.">
-    <meta property="og:description" content="We design, develop, and manage beautiful websites for $50/mo.">
+    <meta property="og:site_name" content="Hampton Lab">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="<%= canonical_url %>">
+    <meta property="og:title" content="<%= page_title %>">
+    <meta property="og:description" content="<%= page_description %>">
     <meta property="og:image" content="https://hamptonlab.com/thumbnail.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Hampton Lab">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= page_title %>">
+    <meta name="twitter:description" content="<%= page_description %>">
+    <meta name="twitter:image" content="https://hamptonlab.com/thumbnail.png">
+    <meta name="twitter:image:alt" content="Hampton Lab">
+
+    <!-- Structured data -->
+    <%= json_ld_tag({ "@context" => "https://schema.org", "@graph" => [ organization_json_ld, website_json_ld, founder_json_ld ] }) %>
 
     <!-- Fav -->
     <link rel="icon" href="/logo-favicon-black.png" type="image/png" media="(prefers-color-scheme: light)">

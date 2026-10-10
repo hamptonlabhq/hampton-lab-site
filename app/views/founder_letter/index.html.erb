@@ -1,3 +1,23 @@
+<% content_for :title, "Founder Letter | Hampton Lab" %>
+<% content_for :description, "Why Waseem Mehany started Hampton Lab: websites built by good people, with upfront pricing, clear timelines, and nothing you don't need." %>
+<% content_for :canonical_path, "/founder_letter/" %>
+<% content_for :head do %>
+<%= json_ld_tag({
+  "@context" => "https://schema.org",
+  "@graph" => [
+    {
+      "@type" => "AboutPage",
+      "@id" => site_url("/founder_letter/"),
+      "url" => site_url("/founder_letter/"),
+      "name" => "A company forged out of frustration.",
+      "inLanguage" => "en",
+      "isPartOf" => { "@id" => site_url("/#website") },
+      "about" => { "@id" => site_url("/#organization") },
+      "author" => { "@id" => site_url("/founder_letter/#founder") }
+    }
+  ]
+}) %>
+<% end %>
 <%= render "header/nav" %>
 
 <main class="bg-beige">
@@ -46,7 +66,7 @@
           </h3>
         </div>
         <div class="letters__paragraph">
-          <%= image_tag("signature.jpg") %>
+          <%= image_tag("signature.jpg", alt: "Waseem Mehany's signature") %>
           <h3><strong>Waseem Mehany</strong></h3>
           <h3>Founder, Hampton Lab.</h3>
           <a href="mailto:waseem.mehany@hamptonlab.com"><h3>waseem.mehany@hamptonlab.com</h3></a>
