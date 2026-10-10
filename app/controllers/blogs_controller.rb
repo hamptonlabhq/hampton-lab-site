@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController
+  before_action { @noindex = true }
   before_action :set_blog, only: %i[ show edit update destroy ]
   allow_unauthenticated_access only: %i[ index show ]
 
