@@ -40,6 +40,12 @@
   width: auto;
 }
 
+/* la-years / europe-treks files are 4:3 but keep the box of their original
+   2324x1754 export so the layout doesn't move; object-fit: cover trims the edges. */
+.project__img img.project__img--legacy-ratio {
+  aspect-ratio: 2324 / 1754;
+}
+
 @media (max-width: 1024px) {
   .project__img {
     grid-column: span 12 / span 12;

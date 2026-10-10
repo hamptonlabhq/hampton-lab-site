@@ -72,6 +72,12 @@
   position: relative;
   place-items: center;
   cursor: pointer;
+  /* Reset native <button> styling */
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
 }
 
 .nav__toggle::before,

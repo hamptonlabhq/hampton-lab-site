@@ -1,14 +1,16 @@
 /* PP Eiko */
 @font-face {
   font-family: "PP-Eiko";
-  src: url("PPEiko-Thin-53f3d1b9.otf");
+  src: url("PPEiko-Thin-40de9be5.woff2") format("woff2");
+  font-display: swap;
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PP-Eiko";
-  src: url("PPEiko-Medium-61b77ca1.otf");
+  src: url("PPEiko-Medium-73cc3ac2.woff2") format("woff2");
+  font-display: swap;
   font-weight: 400;
   font-style: normal;
 }
@@ -16,21 +18,24 @@
 /* Basis Grotesque Pro */
 @font-face {
   font-family: "Basis-Grotesque-Pro";
-  src: url("Basis-Grotesque-Pro-Regular-4b5b7633.otf");
+  src: url("Basis-Grotesque-Pro-Regular-b96d42ce.woff2") format("woff2");
+  font-display: swap;
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Basis-Grotesque-Pro";
-  src: url("Basis-Grotesque-Pro-Regular-Italic-ca6b2885.otf");
+  src: url("Basis-Grotesque-Pro-Regular-Italic-c047e3ed.woff2") format("woff2");
+  font-display: swap;
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Basis-Grotesque-Pro";
-  src: url("Basis-Grotesque-Pro-Bold-0bcd9562.otf");
+  src: url("Basis-Grotesque-Pro-Bold-2c4fcd87.woff2") format("woff2");
+  font-display: swap;
   font-weight: 700;
   font-style: bold;
 }

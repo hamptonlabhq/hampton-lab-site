@@ -12,6 +12,9 @@ export default class extends Controller {
     this.menuTarget.classList.toggle("active");
     this.overlayTarget.classList.toggle("active");
     this.element.classList.toggle("active");
-    this.element.querySelector(".nav__toggle").classList.toggle("active");
+    const toggle = this.element.querySelector(".nav__toggle");
+    const open = toggle.classList.toggle("active");
+    toggle.setAttribute("aria-expanded", open);
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   }
 }

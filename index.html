@@ -1,26 +1,43 @@
-<!-- BEGIN app/views/layouts/application.html.erb
---><!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Hampton Lab</title>
+    <meta charset="utf-8">
+    <title>Hampton Lab: A Website Design and Management Company</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="EtQBzsbBtaKXGHRv0fL7chxXGenr_uLB8lmRw0Pb3d-9MpF2590rHvPcjV2NT0WdzoRKmpCIr9RbShTX2SC2kQ" />
+<meta name="csrf-token" content="Wkoo6s3lUexDHyMQUbHPCNHc4qXzZ1z9ErgO1R8VrWmavt8-8plfL1EnKWcgePD07fgOliiCKUuKGM7SGCr5Tw" />
     
-    <meta name="title" content="Hampton Lab: A Website Design and Mangement Company.">
     <meta name="description" content="We design, develop, and manage beautiful websites for $50/mo.">
+    <link rel="canonical" href="https://hamptonlab.com/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
 
     
 
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hamptonlab.com">
-    <meta property="og:title" content="Hampton Lab: A Website Design and Mangement Company.">
+    <meta property="og:site_name" content="Hampton Lab">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://hamptonlab.com/">
+    <meta property="og:title" content="Hampton Lab: A Website Design and Management Company">
     <meta property="og:description" content="We design, develop, and manage beautiful websites for $50/mo.">
     <meta property="og:image" content="https://hamptonlab.com/thumbnail.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Hampton Lab">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hampton Lab: A Website Design and Management Company">
+    <meta name="twitter:description" content="We design, develop, and manage beautiful websites for $50/mo.">
+    <meta name="twitter:image" content="https://hamptonlab.com/thumbnail.png">
+    <meta name="twitter:image:alt" content="Hampton Lab">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://hamptonlab.com/#organization","name":"Hampton Lab","url":"https://hamptonlab.com/","logo":"https://hamptonlab.com/logo-favicon-black.png","image":"https://hamptonlab.com/thumbnail.png","email":"waseem.mehany@hamptonlab.com","description":"We design, develop, and manage beautiful websites for $50/mo.","founder":{"@id":"https://hamptonlab.com/founder_letter/#founder"},"knowsAbout":["Website design","Website development","Website management","Branding"]},{"@type":"WebSite","@id":"https://hamptonlab.com/#website","name":"Hampton Lab","url":"https://hamptonlab.com/","inLanguage":"en","publisher":{"@id":"https://hamptonlab.com/#organization"}},{"@type":"Person","@id":"https://hamptonlab.com/founder_letter/#founder","name":"Waseem Mehany","jobTitle":"Founder","email":"waseem.mehany@hamptonlab.com","worksFor":{"@id":"https://hamptonlab.com/#organization"}}]}</script>
 
     <!-- Fav -->
     <link rel="icon" href="logo-favicon-black.png" type="image/png" media="(prefers-color-scheme: light)">
@@ -30,48 +47,46 @@
     <link rel="apple-touch-icon" href="logo-favicon-black.png" media="(prefers-color-scheme: light)">
     <!-- <link rel="apple-touch-icon" href="/logo-favicon-black.png" media="(prefers-color-scheme: dark)"> -->
 
-    <link rel="stylesheet" href="assets/actiontext-e646701d.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="assets/application-8b441ae0.css" data-turbo-track="reload" />
+    <link rel="preload" href="assets/PPEiko-Medium-73cc3ac2.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/Basis-Grotesque-Pro-Regular-b96d42ce.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="assets/application-8b441ae0.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="assets/base-f0a33c4b.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="assets/blogs-43395dd0.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="assets/founder-letter-19a9c2a6.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="assets/founder-letter-031fca15.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="assets/home-c51b76d1.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="assets/nav-24bd4c6d.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="assets/nav-b77c8a52.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="assets/pricing-03c64fb9.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="assets/process-478c2bde.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="assets/projects-e0e2ccc7.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="assets/projects-8d6b93f5.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="assets/reset-007a8a8b.css" data-turbo-track="reload" />
-<link rel="stylesheet" href="assets/typography-2bfa46d4.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="assets/typography-d2b180df.css" data-turbo-track="reload" />
 <link rel="stylesheet" href="assets/variables-94cc17dc.css" data-turbo-track="reload" />
     <script type="importmap" data-turbo-track="reload">{
   "imports": {
-    "application": "/assets/application-67e93d4a.js",
-    "@hotwired/turbo-rails": "/assets/turbo.min-ad2c7b86.js",
+    "application": "/assets/application-27eae9e2.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-9fd88cd5.js",
     "@hotwired/stimulus": "/assets/stimulus.min-4b1e420e.js",
     "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc53fe7.js",
-    "trix": "/assets/trix-9a18fe03.js",
+    "rich_text": "/assets/rich_text-113ac791.js",
+    "trix": "/assets/trix-4bf79781.js",
     "@rails/actiontext": "/assets/actiontext.esm-c376325e.js",
     "controllers/application": "/assets/controllers/application-3affb389.js",
-    "controllers/hello_controller": "/assets/controllers/hello_controller-708796bd.js",
     "controllers/home_controller": "/assets/controllers/home_controller-9a20b16d.js",
     "controllers": "/assets/controllers/index-ee64e1f1.js",
-    "controllers/nav_controller": "/assets/controllers/nav_controller-72d1a8bf.js",
-    "controllers/section_bg_controller": "/assets/controllers/section_bg_controller-031874eb.js"
+    "controllers/nav_controller": "/assets/controllers/nav_controller-acd0295c.js"
   }
 }</script>
-<link rel="modulepreload" href="assets/application-67e93d4a.js">
-<link rel="modulepreload" href="assets/turbo.min-ad2c7b86.js">
+<link rel="modulepreload" href="assets/application-27eae9e2.js">
+<link rel="modulepreload" href="assets/turbo.min-9fd88cd5.js">
 <link rel="modulepreload" href="assets/stimulus.min-4b1e420e.js">
 <link rel="modulepreload" href="assets/stimulus-loading-1fc53fe7.js">
-<link rel="modulepreload" href="assets/trix-9a18fe03.js">
-<link rel="modulepreload" href="assets/actiontext.esm-c376325e.js">
 <link rel="modulepreload" href="assets/controllers/application-3affb389.js">
-<link rel="modulepreload" href="assets/controllers/hello_controller-708796bd.js">
 <link rel="modulepreload" href="assets/controllers/home_controller-9a20b16d.js">
 <link rel="modulepreload" href="assets/controllers/index-ee64e1f1.js">
-<link rel="modulepreload" href="assets/controllers/nav_controller-72d1a8bf.js">
-<link rel="modulepreload" href="assets/controllers/section_bg_controller-031874eb.js">
+<link rel="modulepreload" href="assets/controllers/nav_controller-acd0295c.js">
 <script type="module">import "application"</script>
+    
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFDRL0V51F"></script>
@@ -85,15 +100,12 @@
   </head>
 
   <body>
-    <!-- BEGIN app/views/home/index.html.erb
---><!-- BEGIN app/views/header/_nav.html.erb
---><nav class="nav" data-controller="nav">
+    <nav class="nav" data-controller="nav">
   <!-- Logo -->
   <div class="nav__container">
     <div class="nav__logo">
-      <a href="index.html">
-        <!-- BEGIN app/views/header/_logo.html.erb
---><svg width="85" height="13" viewBox="0 0 85 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a aria-label="Hampton Lab home" href="index.html">
+        <svg width="85" height="13" viewBox="0 0 85 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
 <g filter="url(#filter0_i_275_105)">
 <path d="M0 12.7823V0.217676H2.58499V5.32017H8.14876V0.217676H10.7338V12.7823H8.14876V7.48831H2.58499V12.7823H0ZM12.0006 12.7823L16.3146 0.217676H19.3533L23.6588 12.7823H20.9454L20.0124 9.73474H15.647L14.714 12.7823H12.0006ZM17.8041 2.65575L16.2462 7.76692H19.4133L17.8554 2.65575H17.8041ZM24.9257 12.7823V0.217676H27.913L31.4224 9.24714H31.4738L34.9832 0.217676H37.9706V12.7823H35.668V4.28398H35.591L32.2613 12.7823H30.6349L27.2967 4.28398H27.2282V12.7823H24.9257ZM40.0248 12.7823V0.217676H44.9894C47.5915 0.217676 49.3291 1.92431 49.3291 4.51039V4.52781C49.3291 7.11389 47.5915 8.82052 44.9894 8.82052H42.6098V12.7823H40.0248ZM44.356 2.29874H42.6098V6.76556H44.356C45.8368 6.76556 46.7099 5.96452 46.7099 4.53649V4.51907C46.7099 3.0911 45.8368 2.29874 44.356 2.29874ZM53.8145 12.7823V2.38582H50.2453V0.217676H59.9775V2.38582H56.3996V12.7823H53.8145ZM66.2941 13C62.6222 13 60.3368 10.501 60.3368 6.50437V6.48695C60.3368 2.49026 62.6391 0 66.2941 0C69.9579 0 72.2521 2.499 72.2521 6.48695V6.50437C72.2521 10.501 69.9667 13 66.2941 13ZM66.2941 10.7709C68.3487 10.7709 69.6155 9.10787 69.6155 6.50437V6.48695C69.6155 3.86604 68.323 2.22907 66.2941 2.22907C64.2741 2.22907 62.9734 3.85736 62.9734 6.48695V6.50437C62.9734 9.13396 64.2659 10.7709 66.2941 10.7709ZM73.9209 12.7823V0.217676H76.1806L81.7616 8.38511H81.813V0.217676H84.3893V12.7823H82.1466L76.5487 4.5539H76.4973V12.7823H73.9209Z" fill="url(#paint0_linear_275_105)"/>
 </g>
@@ -115,17 +127,17 @@
 </linearGradient>
 </defs>
 </svg>
-<!-- END app/views/header/_logo.html.erb -->
+
 </a>    </div>
 
     <!-- Logout button (if logged in) -->
 
     <!-- Toggle -->
-    <div class="nav__toggle" data-action="click->nav#toggle"></div>
+    <button type="button" class="nav__toggle" data-action="click->nav#toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"></button>
   </div>
 
   <!-- Menu -->
-  <div class="nav__menu" data-nav-target="menu">
+  <div class="nav__menu" id="nav-menu" data-nav-target="menu">
     <div class="nav__menu-container">
       <div class="nav__title">
         <p>NAVIGATE</p>
@@ -142,7 +154,7 @@
 
   <div class="nav__overlay" data-nav-target="overlay" data-action="click->nav#toggle"></div>
 </nav>
-<!-- END app/views/header/_nav.html.erb -->
+
 <main>
   <section class="hero">
     <!-- <h1 class="text-center"><i>Custom websites</i> for the price of Squarespace</h1> -->
@@ -153,7 +165,7 @@
       All website revisions are done in under a week.
     </p> -->
     <p class="text-center">
-      We design, develop, and manage beautiful websites.
+      We design, develop, and manage beautiful websites for small businesses.
       <!-- <br /> -->
       <!-- All website revisions are done in under a week. -->
     </p>
@@ -168,7 +180,7 @@
         <div class="project__grid">
           <!-- Project img -->
           <div class="project__img">
-            <img src="assets/rockwood-construction-ad1721fb.jpg" />
+            <img alt="Rockwood Construction branding and website designed by Hampton Lab" srcset="assets/rockwood-construction-800-db00aaa2.jpg 800w, assets/rockwood-construction-de8972e0.jpg 1600w" sizes="(max-width: 1024px) 100vw, 800px" width="1600" height="1000" decoding="async" loading="eager" fetchpriority="high" src="assets/rockwood-construction-de8972e0.jpg" />
           </div>
           <!-- Project content -->
           <div class="project__content">
@@ -178,7 +190,7 @@
                 <br>
                 <i>(In Progress)</i>
               </h2>
-              <a class="project__link" target="_blank" href="https://rockwood-452a10.webflow.io/">Visit website &#8594;</a>
+              <a class="project__link" target="_blank" aria-label="Visit the Rockwood Construction website (opens in a new tab)" href="https://rockwood-452a10.webflow.io/">Visit website &#8594;</a>
             </div>
             <ul class="project__info">
               <li class="project__info-item">
@@ -193,7 +205,7 @@
                 <p class="project__info-item--detail">A boutique general contractor specializing in multifamily construction in California and Nevada.</p>
               </li>
             </ul>
-            <a class="btn btn--secondary project__btn" target="_blank" href="https://rockwood-452a10.webflow.io/">Visit website</a>
+            <a class="btn btn--secondary project__btn" target="_blank" aria-label="Visit the Rockwood Construction website (opens in a new tab)" href="https://rockwood-452a10.webflow.io/">Visit website</a>
           </div>
         </div>
       </div>
@@ -202,13 +214,13 @@
         <div class="project__grid">
           <!-- Project img -->
           <div class="project__img">
-            <img src="assets/la-years-d4fbba3a.jpg" />
+            <img alt="LA Years branding and website designed by Hampton Lab" class="project__img--legacy-ratio" srcset="assets/la-years-800-b73ecad3.jpg 800w, assets/la-years-3dd309e5.jpg 1600w" sizes="(max-width: 1024px) 100vw, 800px" width="1600" height="1200" decoding="async" loading="lazy" src="assets/la-years-3dd309e5.jpg" />
           </div>
           <!-- Project content -->
           <div class="project__content">
             <div class="project__header">
               <h2 class="project__title">LA Years</h2>
-              <a class="project__link" target="_blank" href="https://www.layears.org">Visit website &#8594;</a>
+              <a class="project__link" target="_blank" aria-label="Visit the LA Years website (opens in a new tab)" href="https://www.layears.org">Visit website &#8594;</a>
             </div>
             <ul class="project__info">
               <li class="project__info-item">
@@ -223,7 +235,7 @@
                 <p class="project__info-item--detail">A history website for a prominent Christian author and teacher in the 20th century.</p>
               </li>
             </ul>
-            <a class="btn btn--secondary project__btn" target="_blank" href="https://www.layears.org">Visit website</a>
+            <a class="btn btn--secondary project__btn" target="_blank" aria-label="Visit the LA Years website (opens in a new tab)" href="https://www.layears.org">Visit website</a>
           </div>
         </div>
       </div>
@@ -232,13 +244,13 @@
         <div class="project__grid">
           <!-- Project img -->
           <div class="project__img">
-            <img src="assets/sancerra-17df7ece.jpg" />
+            <img alt="Sancerra branding and website designed by Hampton Lab" srcset="assets/sancerra-800-6a7069b4.jpg 800w, assets/sancerra-09b682c5.jpg 1600w" sizes="(max-width: 1024px) 100vw, 800px" width="1600" height="1000" decoding="async" loading="lazy" src="assets/sancerra-09b682c5.jpg" />
           </div>
           <!-- Project content -->
           <div class="project__content">
             <div class="project__header">
               <h2 class="project__title">Sancerra</h2>
-              <a class="project__link" target="_blank" href="https://sancerra.com">Visit website &#8594;</a>
+              <a class="project__link" target="_blank" aria-label="Visit the Sancerra website (opens in a new tab)" href="https://sancerra.com">Visit website &#8594;</a>
             </div>
             <ul class="project__info">
               <li class="project__info-item">
@@ -253,7 +265,7 @@
                 <p class="project__info-item--detail">A website for a community builder that is pioneering creative solutions to the housing shortage in California</p>
               </li>
             </ul>
-            <a class="btn btn--secondary project__btn" target="_blank" href="https://sancerra.com">Visit website</a>
+            <a class="btn btn--secondary project__btn" target="_blank" aria-label="Visit the Sancerra website (opens in a new tab)" href="https://sancerra.com">Visit website</a>
           </div>
         </div>
       </div>
@@ -262,13 +274,13 @@
         <div class="project__grid">
           <!-- Project img -->
           <div class="project__img">
-            <img src="assets/cornerstone-real-estate-bfa62135.jpg" />
+            <img alt="Cornerstone Real Estate branding designed by Hampton Lab" srcset="assets/cornerstone-real-estate-800-7e6f9828.jpg 800w, assets/cornerstone-real-estate-960a3143.jpg 1600w" sizes="(max-width: 1024px) 100vw, 800px" width="1600" height="1000" decoding="async" loading="lazy" src="assets/cornerstone-real-estate-960a3143.jpg" />
           </div>
           <!-- Project content -->
           <div class="project__content">
             <div class="project__header">
               <h2 class="project__title">Cornerstone Real Estate</h2>
-              <a class="project__link" target="_blank" href="https://dstproperties1031.com/">Visit website &#8594;</a>
+              <a class="project__link" target="_blank" aria-label="Visit the Cornerstone Real Estate website (opens in a new tab)" href="https://dstproperties1031.com/">Visit website &#8594;</a>
             </div>
             <ul class="project__info">
               <li class="project__info-item">
@@ -283,7 +295,7 @@
                 <p class="project__info-item--detail">A real estate investing company focused on Delaware Statutory Trust (DST) investments and 1031 exchanges.</p>
               </li>
             </ul>
-            <a class="btn btn--secondary project__btn" target="_blank" href="https://dstproperties1031.com/">Visit website</a>
+            <a class="btn btn--secondary project__btn" target="_blank" aria-label="Visit the Cornerstone Real Estate website (opens in a new tab)" href="https://dstproperties1031.com/">Visit website</a>
           </div>
         </div>
       </div>
@@ -292,13 +304,13 @@
         <div class="project__grid">
           <!-- Project img -->
           <div class="project__img">
-            <img src="assets/dr-tim-chiu-966f1939.jpg" />
+            <img alt="Dr. Tim Chiu website designed by Hampton Lab" srcset="assets/dr-tim-chiu-800-9ca42bca.jpg 800w, assets/dr-tim-chiu-b6cbb966.jpg 1600w" sizes="(max-width: 1024px) 100vw, 800px" width="1600" height="1000" decoding="async" loading="lazy" src="assets/dr-tim-chiu-b6cbb966.jpg" />
           </div>
           <!-- Project content -->
           <div class="project__content">
             <div class="project__header">
               <h2 class="project__title">Dr. Tim Chiu</h2>
-              <a class="project__link" target="_blank" href="https://drtimothychiu.com/">Visit website &#8594;</a>
+              <a class="project__link" target="_blank" aria-label="Visit the Dr. Tim Chiu website (opens in a new tab)" href="https://drtimothychiu.com/">Visit website &#8594;</a>
             </div>
             <ul class="project__info">
               <li class="project__info-item">
@@ -313,7 +325,7 @@
                 <p class="project__info-item--detail">A chiropractic business located in southern California.</p>
               </li>
             </ul>
-            <a class="btn btn--secondary project__btn" target="_blank" href="https://drtimothychiu.com/">Visit website</a>
+            <a class="btn btn--secondary project__btn" target="_blank" aria-label="Visit the Dr. Tim Chiu website (opens in a new tab)" href="https://drtimothychiu.com/">Visit website</a>
           </div>
         </div>
       </div>
@@ -322,13 +334,13 @@
         <div class="project__grid">
           <!-- Project img -->
           <div class="project__img">
-            <img src="assets/europe-treks-59d00816.jpg" />
+            <img alt="Europe Treks branding and website designed by Hampton Lab" class="project__img--legacy-ratio" srcset="assets/europe-treks-800-e19e6c4a.jpg 800w, assets/europe-treks-a073a6d7.jpg 1600w" sizes="(max-width: 1024px) 100vw, 800px" width="1600" height="1200" decoding="async" loading="lazy" src="assets/europe-treks-a073a6d7.jpg" />
           </div>
           <!-- Project content -->
           <div class="project__content">
             <div class="project__header">
               <h2 class="project__title">Europe Treks</h2>
-              <a class="project__link" target="_blank" href="https://europetreks.com">Visit website &#8594;</a>
+              <a class="project__link" target="_blank" aria-label="Visit the Europe Treks website (opens in a new tab)" href="https://europetreks.com">Visit website &#8594;</a>
             </div>
             <ul class="project__info">
               <li class="project__info-item">
@@ -340,17 +352,16 @@
                 <p class="project__info-item--value">Branding & Website</p>
               </li>
               <li class="project__info-item">
-                <p class="project__info-item--detail">A travel business for focused on church history trips in Europe.</p>
+                <p class="project__info-item--detail">A travel business focused on church history trips in Europe.</p>
               </li>
             </ul>
-            <a class="btn btn--secondary project__btn" target="_blank" href="https://europetreks.com">Visit website</a>
+            <a class="btn btn--secondary project__btn" target="_blank" aria-label="Visit the Europe Treks website (opens in a new tab)" href="https://europetreks.com">Visit website</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 </main>
-<!-- END app/views/home/index.html.erb -->
+
   </body>
 </html>
-<!-- END app/views/layouts/application.html.erb -->

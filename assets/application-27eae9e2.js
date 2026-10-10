@@ -2,5 +2,5 @@
 import "@hotwired/turbo-rails";
 import "controllers";
 
-import "trix";
-import "@rails/actiontext";
+// The rich-text editor (trix + actiontext) lives in "rich_text" and is only
+// loaded on the blog pages, see layouts/application.html.erb.
