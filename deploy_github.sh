@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Builds the static production site (served from the `prod` branch via GitHub
-# Pages behind Cloudflare) by running the Rails app locally and mirroring it with wget.
+# Builds the static production site (served from the `prod` branch by Cloudflare
+# Pages) by running the Rails app locally and mirroring it with wget.
 #
 #   ./deploy_github.sh                 # build into ./dist
 #   OUT_DIR=/tmp/site PORT=4100 ./deploy_github.sh
@@ -18,9 +18,9 @@ URL="http://${HOST}:${PORT}/"
 BOOT_TIMEOUT="${BOOT_TIMEOUT:-60}"
 PID_FILE="tmp/pids/static_build.pid"
 
-# Files in public/ that wget can't discover by following links.
-# CNAME lives at the repo root; the rest are optional.
-EXTRAS=(CNAME public/thumbnail.png public/robots.txt public/sitemap.xml public/_headers)
+# Files in public/ that wget can't discover by following links (all optional).
+# No CNAME: that file is for GitHub Pages; Cloudflare Pages sets the domain itself.
+EXTRAS=(public/thumbnail.png public/robots.txt public/sitemap.xml public/_headers)
 
 RAILS_PID=""
 cleanup() {
