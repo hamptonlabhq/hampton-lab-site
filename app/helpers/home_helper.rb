@@ -5,12 +5,17 @@ module HomeHelper
   #   name => [full width, full height, small width]
   PROJECT_IMAGES = {
     "rockwood-construction"   => [ 1600, 1000, 800 ],
-    "la-years"                => [ 2324, 1754, 1162 ],
+    "la-years"                => [ 1600, 1200, 800 ],
     "sancerra"                => [ 1600, 1000, 800 ],
     "cornerstone-real-estate" => [ 1600, 1000, 800 ],
     "dr-tim-chiu"             => [ 1600, 1000, 800 ],
-    "europe-treks"            => [ 2324, 1754, 1162 ]
+    "europe-treks"            => [ 1600, 1200, 800 ]
   }.freeze
+
+  # These were laid out at their original 2324x1754 ratio. Their files are now
+  # 4:3, so this class keeps the old box (see projects.css) and object-fit: cover
+  # trims the ~0.6% difference instead of shifting the layout.
+  LEGACY_RATIO_IMAGES = %w[ la-years europe-treks ].freeze
 
   # Displayed at 100% width below 1024px, 8/12 columns (max 800px) above.
   PROJECT_IMAGE_SIZES = "(max-width: 1024px) 100vw, 800px".freeze
@@ -20,6 +25,7 @@ module HomeHelper
   def project_image(name, alt:, first: false)
     width, height, small = PROJECT_IMAGES.fetch(name)
     image_tag "#{name}.jpg", alt: alt,
+      class: ("project__img--legacy-ratio" if LEGACY_RATIO_IMAGES.include?(name)),
       srcset: { "#{name}-#{small}.jpg" => "#{small}w", "#{name}.jpg" => "#{width}w" },
       sizes: PROJECT_IMAGE_SIZES,
       width: width, height: height,
