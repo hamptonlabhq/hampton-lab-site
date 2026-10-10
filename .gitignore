@@ -22,17 +22,26 @@
 !/tmp/pids/.keep
 
 # Ignore storage (uploaded files in development and any SQLite databases).
-# I'm uploading this to github.
-#/storage/*
-#!/storage/.keep
-#/tmp/storage/*
-#!/tmp/storage/
-#!/tmp/storage/.keep
+# These contain local user accounts, sessions and uploads; never commit them.
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
+*.sqlite3
+*.sqlite3-*
 
 /public/assets
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/credentials/*.key
 
 # Mac specific files
 .DS_Store
+
+# Node packages (dev-only Prettier tooling; restore with `npm install`)
+/node_modules/
+
+# wget mirror output from deploy_github.sh
+/127.0.0.1:3000/
