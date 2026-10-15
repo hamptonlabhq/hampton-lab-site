@@ -1,0 +1,9 @@
+<% content_for :title, "Page not found | Hampton Lab" %>
+<%= render "header/nav" %>
+<main class="bg-beige">
+  <section class="hero">
+    <h1 class="text-center">Page <i>not found</i>.</h1>
+    <p class="text-center">The page you were looking for doesn't exist or has moved.</p>
+    <%= link_to "Back to home &#8594;".html_safe, root_path, class: "btn btn--large" %>
+  </section>
+</main>

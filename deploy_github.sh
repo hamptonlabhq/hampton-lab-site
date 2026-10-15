@@ -20,8 +20,7 @@ PID_FILE="tmp/pids/static_build.pid"
 
 # Files in public/ that wget can't discover by following links (all optional).
 # No CNAME: that file is for GitHub Pages; Cloudflare Pages sets the domain itself.
-# 404.html: without it Cloudflare Pages serves index.html with a 200 for every unknown URL.
-EXTRAS=(public/thumbnail.png public/robots.txt public/sitemap.xml public/_headers public/404.html)
+EXTRAS=(public/thumbnail.png public/robots.txt public/sitemap.xml public/_headers)
 
 RAILS_PID=""
 cleanup() {
@@ -90,6 +89,15 @@ for page in index.html process/index.html founder_letter/index.html; do
     exit 1
   fi
 done
+
+# Without 404.html Cloudflare Pages serves index.html with a 200 for every
+# unknown URL. The page is rendered by the app (errors#not_found) so it matches
+# the rest of the site; its links are root-relative, so it works at any depth.
+echo "Saving 404 page..."
+if [[ "$(curl -s -o "$OUT_DIR/404.html" -w '%{http_code}' "${URL}not_found")" != "404" ]]; then
+  echo "Error: ${URL}not_found did not render the not found page" >&2
+  exit 1
+fi
 
 echo "Copying extra files..."
 for file in "${EXTRAS[@]}"; do

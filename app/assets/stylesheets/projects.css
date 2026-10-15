@@ -34,6 +34,11 @@
   object-fit: cover;
 }
 
+/* <picture> wrapper from project_image: let the <img> lay out as before. */
+.project__img picture {
+  display: contents;
+}
+
 .project__img img {
   object-fit: cover;
   height: 100%;

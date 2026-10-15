@@ -18,7 +18,8 @@
   /* Font colors */
   /* --color-text: var(--color-black-200); */
   --color-text: #191a1b;
-  --color-link: var(--color-blue-200);
+  /* Darker than blue-200 so links pass WCAG AA (4.5:1) on white and beige. */
+  --color-link: #1f6fbf;
   --color-text-gray: var(--color-black-300);
 
   /* Font sizes */

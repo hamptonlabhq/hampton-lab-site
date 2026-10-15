@@ -22,15 +22,22 @@ module HomeHelper
 
   # The first project image is the desktop LCP element, so it loads eagerly with
   # high priority; the rest are below the fold and load lazily.
+  #
+  # Every JPG has a WebP twin of the same name (about half the size), offered
+  # through <picture>; browsers without WebP fall back to the JPG.
   def project_image(name, alt:, first: false)
     width, height, small = PROJECT_IMAGES.fetch(name)
-    image_tag "#{name}.jpg", alt: alt,
-      class: ("project__img--legacy-ratio" if LEGACY_RATIO_IMAGES.include?(name)),
-      srcset: { "#{name}-#{small}.jpg" => "#{small}w", "#{name}.jpg" => "#{width}w" },
-      sizes: PROJECT_IMAGE_SIZES,
-      width: width, height: height,
-      decoding: "async",
-      loading: (first ? "eager" : "lazy"),
-      fetchpriority: (first ? "high" : nil)
+    tag.picture do
+      tag.source(type: "image/webp", sizes: PROJECT_IMAGE_SIZES,
+        srcset: "#{image_path("#{name}-#{small}.webp")} #{small}w, #{image_path("#{name}.webp")} #{width}w") +
+      image_tag("#{name}.jpg", alt: alt,
+        class: ("project__img--legacy-ratio" if LEGACY_RATIO_IMAGES.include?(name)),
+        srcset: { "#{name}-#{small}.jpg" => "#{small}w", "#{name}.jpg" => "#{width}w" },
+        sizes: PROJECT_IMAGE_SIZES,
+        width: width, height: height,
+        decoding: "async",
+        loading: (first ? "eager" : "lazy"),
+        fetchpriority: (first ? "high" : nil))
+    end
   end
 end
