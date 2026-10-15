@@ -67,6 +67,12 @@ module ApplicationHelper
     }
   end
 
+  # The sign-in, password and blog pages. They are not part of the static build
+  # and are the only pages that load Turbo.
+  def admin_page?
+    controller_name.in?(%w[ blogs sessions passwords ])
+  end
+
   # Pages that render or edit Action Text content and therefore need the trix
   # editor JS and actiontext.css. The public marketing pages don't.
   def rich_text_page?

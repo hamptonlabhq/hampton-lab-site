@@ -59,6 +59,7 @@
     <%# All stylesheet files in app/assets/stylesheets (actiontext.css only on blog pages) %>
     <%= stylesheet_link_tag *page_stylesheets, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_import_module_tag "@hotwired/turbo-rails" if admin_page? %>
     <%= javascript_import_module_tag "rich_text" if rich_text_page? %>
 
     <!-- Google tag (gtag.js) -->

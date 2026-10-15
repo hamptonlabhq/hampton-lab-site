@@ -8,8 +8,6 @@ export default class extends Controller {
   };
 
   connect() {
-    console.log('Home Stimulus controller connected, setting up Intersection Observer.');
-
     // Define the options for the Intersection Observer
     this.options = {
       root: null, // The viewport is the root (i.e., the browser window)
@@ -23,7 +21,6 @@ export default class extends Controller {
 
     // Start observing the element this controller is attached to (which is the <section> in your HTML).
     this.observer.observe(this.element);
-    // console.log('Observing element:', this.element);
   }
 
   /**
@@ -46,7 +43,6 @@ export default class extends Controller {
   disconnect() {
     if (this.observer) {
       this.observer.unobserve(this.element);
-      console.log('Home Stimulus controller disconnected and unobserved element.');
     }
   }
 }
