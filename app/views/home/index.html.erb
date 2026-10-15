@@ -20,46 +20,12 @@
 
   <section data-controller="home" data-home-color-value="var(--color-beige)" data-home-default-color-value="var(--color-white)" id="projects">
     <div class="projects__container">
-      <!-- Rockwood Construction -->
-      <div class="project__card">
-        <div class="project__grid">
-          <!-- Project img -->
-          <div class="project__img">
-            <%= project_image("rockwood-construction", first: true, alt: "Rockwood Construction branding and website designed by Hampton Lab") %>
-          </div>
-          <!-- Project content -->
-          <div class="project__content">
-            <div class="project__header">
-              <h2 class="project__title">
-                Rockwood Construction
-                <br>
-                <i>(In Progress)</i>
-              </h2>
-              <%= link_to "Visit website &#8594;".html_safe, "https://rockwood-452a10.webflow.io/", class: "project__link", target: :_blank, aria: { label: "Visit website: Rockwood Construction (opens in a new tab)" } %>
-            </div>
-            <ul class="project__info">
-              <li class="project__info-item">
-                <p class="project__info-item--label">Client</p>
-                <p class="project__info-item--value">Rockwood Construction</p>
-              </li>
-              <li class="project__info-item">
-                <p class="project__info-item--label">Project</p>
-                <p class="project__info-item--value">Branding & Website</p>
-              </li>
-              <li class="project__info-item">
-                <p class="project__info-item--detail">A boutique general contractor specializing in multifamily construction in California and Nevada.</p>
-              </li>
-            </ul>
-            <%= link_to "Visit website", "https://rockwood-452a10.webflow.io/", class: "btn btn--secondary project__btn", target: :_blank, aria: { label: "Visit website: Rockwood Construction (opens in a new tab)" } %>
-          </div>
-        </div>
-      </div>
       <!-- LA Years -->
       <div class="project__card">
         <div class="project__grid">
           <!-- Project img -->
           <div class="project__img">
-            <%= project_image("la-years", alt: "LA Years branding and website designed by Hampton Lab") %>
+            <%= project_image("la-years", first: true, alt: "LA Years branding and website designed by Hampton Lab") %>
           </div>
           <!-- Project content -->
           <div class="project__content">
@@ -174,7 +140,42 @@
           </div>
         </div>
       </div>
-      <!-- Europe Treks -->
+      <!-- Rockwood Construction -->
+      <div class="project__card">
+        <div class="project__grid">
+          <!-- Project img -->
+          <div class="project__img">
+            <%= project_image("rockwood-construction", alt: "Rockwood Construction branding and website designed by Hampton Lab") %>
+          </div>
+          <!-- Project content -->
+          <div class="project__content">
+            <div class="project__header">
+              <h2 class="project__title">
+                Rockwood Construction
+                <br>
+                <i>(In Progress)</i>
+              </h2>
+              <%= link_to "Visit website &#8594;".html_safe, "https://rockwood-452a10.webflow.io/", class: "project__link", target: :_blank, aria: { label: "Visit website: Rockwood Construction (opens in a new tab)" } %>
+            </div>
+            <ul class="project__info">
+              <li class="project__info-item">
+                <p class="project__info-item--label">Client</p>
+                <p class="project__info-item--value">Rockwood Construction</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--label">Project</p>
+                <p class="project__info-item--value">Branding & Website</p>
+              </li>
+              <li class="project__info-item">
+                <p class="project__info-item--detail">A boutique general contractor specializing in multifamily construction in California and Nevada.</p>
+              </li>
+            </ul>
+            <%= link_to "Visit website", "https://rockwood-452a10.webflow.io/", class: "btn btn--secondary project__btn", target: :_blank, aria: { label: "Visit website: Rockwood Construction (opens in a new tab)" } %>
+          </div>
+        </div>
+      </div>
+      <%# Europe Treks: hidden for now. Remove the "if false" to show it again. %>
+      <% if false %>
       <div class="project__card">
         <div class="project__grid">
           <!-- Project img -->
@@ -204,6 +205,7 @@
           </div>
         </div>
       </div>
+      <% end %>
     </div>
   </section>
 </main>
