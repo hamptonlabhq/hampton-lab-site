@@ -78,5 +78,6 @@
 
 .letters__paragraph img {
   width: 15rem;
+  height: auto;
   margin-top: var(--space-md);
 }
